@@ -77,6 +77,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @keyframes grow{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:reduce){.onion circle{animation:none}html{scroll-behavior:auto}}
 
+.notice{background:var(--gold-soft);border-bottom:1px solid #ecd48a;color:var(--ink)}
+.notice .wrap{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;padding-top:16px;padding-bottom:16px;font-size:16.5px;line-height:1.45}
+.notice strong{font-family:var(--display);color:var(--plum)}
 .facts{background:var(--plum-2);color:#fff;border-top:4px solid var(--marigold)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .facts div{padding:22px 20px 22px 0;border-right:1px solid rgba(255,255,255,.14);margin-right:20px}
@@ -316,6 +319,11 @@ footer p{margin:0;max-width:52em}
   </dl>
 </div>
 
+<aside class="notice" aria-label="Important note on deadlines"><div class="wrap">
+  <strong>Deadlines: this website is the official reference.</strong>
+  <span>If a date or deadline in the Course Guide, a module, or any other PDF or file differs from what is shown here, follow this website.</span>
+</div></aside>
+
 <main>
 
 <!-- ============ START HERE ============ -->
@@ -454,7 +462,7 @@ footer p{margin:0;max-width:52em}
       <div class="meta"><span class="tag self">15 components, see Course Guide, Section IX</span><span class="tag self">Assigned Sunday, November 1</span><span class="tag due">Due Sunday, November 8</span></div>
     </article>
   </div>
-  <p class="note"><b>Submitting.</b> Each task is due seven days after its Sunday asynchronous session. Upload it to the <a href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Submission Folder</a>, and reply substantively to both classmates in that week's Discussion channel on MS Teams. End every paper with a short statement of whether and how you used AI. Full instructions and the rubric for each task are in that week's companion module.</p>
+  <p class="note"><b>Submitting.</b> Each task is due seven days after its Sunday asynchronous session. Where the PDFs give a different deadline, the dates on this website apply. Upload it to the <a href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Submission Folder</a>, and reply substantively to both classmates in that week's Discussion channel on MS Teams. End every paper with a short statement of whether and how you used AI. Full instructions and the rubric for each task are in that week's companion module.</p>
 </div></section>
 
 <!-- ============ CONFERENCE ============ -->
@@ -724,6 +732,7 @@ footer p{margin:0;max-width:52em}
 
 <footer><div class="wrap">
   <p>Class site maintained by Carlo S. Villalona, LPT, PhD, for PHDENG 2214, Section 4-PHD-ENG-A. It is not an official University website. Materials are for use in this class only.</p>
+  <p style="margin-top:10px">For deadlines, this website takes precedence over the PDFs and other course files.</p>
 </div></footer>
 
 <script>
