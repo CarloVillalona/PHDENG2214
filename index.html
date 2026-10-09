@@ -38,11 +38,11 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:20;background:rgba(92,15,28,.97);backdrop-filter:blur(8px);color:#fff}
-.nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:56px}
 .nav .brand{font-family:var(--display);font-weight:700;text-decoration:none;white-space:nowrap}
-.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul{display:flex;gap:2px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
 .nav ul::-webkit-scrollbar{display:none}
-.nav li a{display:block;padding:8px 10px;border-radius:999px;font-family:var(--display);font-size:15px;text-decoration:none;color:#f4e0dd;white-space:nowrap}
+.nav li a{display:block;padding:7px 9px;border-radius:999px;font-family:var(--display);font-size:14px;text-decoration:none;color:#f4e0dd;white-space:nowrap}
 .nav li a:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav li a.on{background:var(--marigold);color:var(--plum)}
 
@@ -245,6 +245,20 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.86em;backgroun
 .bmnote{font-size:15px;color:var(--muted);margin:10px 0 0}
 .regs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 
+/* professor */
+.prof{display:grid;grid-template-columns:300px 1fr;gap:56px;align-items:start}
+.portrait{position:relative;margin:0 14px 14px 0}
+.portrait::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid var(--marigold);border-radius:var(--r)}
+.portrait img{position:relative;display:block;width:100%;height:auto;border-radius:var(--r);background:var(--plum)}
+.prof .role{font-family:var(--display);font-weight:600;color:var(--plum);margin:6px 0 18px}
+.prof h3.nm{font-size:1.9rem}
+.prof .bio p{max-width:40em}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;margin-top:26px}
+.creds h4{font-family:var(--display);font-size:14px;font-weight:700;color:var(--muted);letter-spacing:0;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--plum)}
+.creds ul{list-style:none;margin:0;padding:0;font-size:16px;line-height:1.45}
+.creds li{padding:7px 0;border-bottom:1px solid var(--line)}
+.creds li span{display:block;font-family:var(--display);font-size:14px;color:var(--muted)}
+
 /* profile */
 .profile{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
 .sheet{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
@@ -303,13 +317,14 @@ footer p{margin:0;max-width:52em}
   .onion{justify-self:start;max-width:340px}
   .facts .wrap{grid-template-columns:1fr 1fr}
   .facts div{border:0;margin:0;padding:16px 12px 16px 0}
-  .about,.levels,.clos,.themes,.scholars,.regs,.start,.weeks,.exams,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
+  .prof,.creds,.about,.levels,.clos,.themes,.scholars,.regs,.start,.weeks,.exams,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
   .doc.first{grid-row:auto;min-height:0}
   .doc.first .n{margin-bottom:28px}
   .mod{grid-template-columns:44px 1fr;gap:6px 14px}
   .mod .tag,.mod .open{grid-column:2;justify-self:start}
   .bar{grid-template-columns:1fr 52px}
   .bar .track{grid-column:1/-1;grid-row:2}
+  .portrait{max-width:260px}
   .fields,.stds,.qs{columns:1}
   .tl::before{left:63px}.tl li{grid-template-columns:48px 1fr;gap:34px}.tl li::before{left:57px}.tl .yr{font-size:1.05rem}
   .bm thead{display:none}.bm,.bm tbody,.bm tr,.bm td{display:block;width:100%!important}.bm td{border-top:0;padding:4px 16px}.bm tr{border-top:1px solid var(--line);padding:10px 0}
@@ -327,13 +342,14 @@ footer p{margin:0;max-width:52em}
     <a class="brand" href="#top">PHDENG 2214</a>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#professor">Professor</a></li>
       <li><a href="#start">Start here</a></li>
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#modules">Modules</a></li>
       <li><a href="#tasks">Tasks</a></li>
-      <li><a href="#conference">October 31</a></li>
+      <li><a href="#conference">Oct 31</a></li>
       <li><a href="#profile">Profile</a></li>
-      <li><a href="#field">The field</a></li>
+      <li><a href="#field">Field</a></li>
       <li><a href="#readings">Readings</a></li>
       <li><a href="#grading">Grading</a></li>
       <li><a href="#standards">Standards</a></li>
@@ -453,6 +469,45 @@ footer p{margin:0;max-width:52em}
     <li><span class="n">CLO 9</span><div><b>Scholarly contribution</b><span>Produce publishable-quality scholarly writing that contributes to the field, consistent with CHED expectations for doctoral students.</span></div></li>
     <li><span class="n">CLO 10</span><div><b>Reflexive leadership</b><span>Critically reflect on one's positionality and agency as a language policy actor in one's own institution.</span></div></li>
   </ol>
+</div></section>
+
+<!-- ============ PROFESSOR ============ -->
+<section id="professor"><div class="wrap">
+  <div class="head">
+    <h2>Your professor</h2>
+  </div>
+  <div class="prof">
+    <figure class="portrait"><img src="assets/professor.jpg" width="720" height="900" alt="Portrait of Carlo S. Villalona, LPT, PhD"></figure>
+    <div class="bio">
+      <h3 class="nm">Carlo S. Villalona, LPT, PhD</h3>
+      <p class="role">Course Facilitator, PHDENG 2214</p>
+      <p>An applied linguist and academic leader with more than 17 years of experience across higher education and international K–12 schooling, in the Philippines and overseas. His work has moved between the classroom and academic leadership: university teaching and curriculum coordination, curriculum and instruction, and senior school leadership, including service as a deputy headmaster and as head of an International Baccalaureate school.</p>
+      <p>Much of that work has been the practical side of what this course studies. He has supported higher-education accreditation and IB authorization, led curriculum governance and syllabus standardization, and built systems for monitoring student progress. He also prepares international learners for IELTS, TOEFL iBT, and the Digital SAT.</p>
+      <div class="creds">
+        <div><h4>Education</h4><ul>
+          <li>PhD in Applied Linguistics<span>Philippine Normal University</span></li>
+          <li>MAEd in English Language and Literature Teaching<span>Philippine Normal University</span></li>
+          <li>BSEd in English, cum laude<span>Philippine Normal University</span></li>
+        </ul></div>
+        <div><h4>Areas of practice</h4><ul>
+          <li>Language education and applied linguistics</li>
+          <li>Curriculum design and academic quality assurance</li>
+          <li>Accreditation and program documentation</li>
+          <li>School and higher-education leadership</li>
+          <li>English proficiency test preparation</li>
+        </ul></div>
+        <div><h4>Certifications</h4><ul>
+          <li>TESOL/TEFL Trainer</li>
+          <li>Diploma in TESOL</li>
+          <li>Highfield Level 4 Education and Training</li>
+          <li>Co-Active Coaching</li>
+        </ul></div>
+        <div><h4>Contact</h4><ul>
+          <li>carlo.villalon@perpetualdalta.edu.ph<span>Official course communication goes through this address only.</span></li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
 </div></section>
 
 <!-- ============ START HERE ============ -->
