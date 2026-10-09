@@ -126,6 +126,10 @@ h3{font-size:1.3rem;font-weight:700}
 .slot.dueb{background:#fcf7f6;margin-top:auto}
 .slot.dueb .tag{border-radius:8px;margin-bottom:4px}
 .slot b{font-family:var(--display)}
+.exams{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.exam{background:var(--plum);color:#fff;border-radius:var(--r);padding:22px 24px}
+.exam h3{margin:12px 0 4px;font-size:1.4rem}
+.exam .xd{margin:0;font-family:var(--display);color:var(--marigold);font-weight:600}
 .key{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-family:var(--display);font-size:15px;color:var(--muted)}
 
 /* modules */
@@ -238,7 +242,7 @@ footer p{margin:0;max-width:52em}
   .onion{justify-self:start;max-width:340px}
   .facts .wrap{grid-template-columns:1fr 1fr}
   .facts div{border:0;margin:0;padding:16px 12px 16px 0}
-  .start,.weeks,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
+  .start,.weeks,.exams,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
   .doc.first{grid-row:auto;min-height:0}
   .doc.first .n{margin-bottom:28px}
   .mod{grid-template-columns:44px 1fr;gap:6px 14px}
@@ -280,7 +284,7 @@ footer p{margin:0;max-width:52em}
       <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School. Everything you need for the four weeks is linked from this page.</p>
       <div class="btns">
         <a class="btn solid" href="#start">Start here</a>
-        <a class="btn ghost" href="https://drive.google.com/drive/folders/1dKfNtWpReKLUw0FlrHc4YwSd1YiYKNt8" target="_blank" rel="noopener">Open the course folder</a>
+        <a class="btn ghost" href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Open the Submission Folder</a>
       </div>
     </div>
 
@@ -318,7 +322,7 @@ footer p{margin:0;max-width:52em}
 <section id="start"><div class="wrap">
   <div class="head">
     <h2>Start here</h2>
-    <p>Three documents and one template set up the whole module. Open the Course Guide first, then read the Orientation Module before the October 10 session.</p>
+    <p>Three documents, one template, and one folder for your submissions set up the whole module. Open the Course Guide first, then read the Orientation Module before the October 10 session.</p>
   </div>
   <div class="start">
     <a class="doc first" href="https://drive.google.com/file/d/14t6MDxOngSvDU7xWC0KPaV66nV1RxXUA/view" target="_blank" rel="noopener">
@@ -342,10 +346,10 @@ footer p{margin:0;max-width:52em}
       <p>The one-page Canva template you fill in and share with the class before the end of Week 1.</p>
       <span class="go">Open the Canva template</span>
     </a>
-    <a class="doc" href="https://drive.google.com/drive/folders/1dKfNtWpReKLUw0FlrHc4YwSd1YiYKNt8" target="_blank" rel="noopener">
-      <h3>Course folder</h3>
-      <p>Every file on this page lives in one Google Drive folder, along with the slide templates and the submission folder.</p>
-      <span class="go">Open the folder</span>
+    <a class="doc" href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">
+      <h3>Submission Folder</h3>
+      <p>Upload every asynchronous task, your slides, and your Companion Module here, each by its due date.</p>
+      <span class="go">Open the Submission Folder</span>
     </a>
   </div>
 </div></section>
@@ -354,33 +358,37 @@ footer p{margin:0;max-width:52em}
 <section id="schedule"><div class="wrap">
   <div class="head">
     <h2>Four weekends</h2>
-    <p>We meet live twice, on the first and last Saturdays. Weeks 2 and 3 are fully self-paced. Every Sunday carries eight hours of independent work and a task due at 8:00 PM, Philippine time.</p>
+    <p>We meet live twice, on the first and last Saturdays. Weeks 2 and 3 are fully self-paced. Every Sunday carries eight hours of independent work on that week's asynchronous task, which is due seven days later.</p>
   </div>
   <div class="weeks">
     <article class="week">
       <header><div class="wk">Week 1</div><div class="dt">October 10–11</div><h4>What is language policy and planning?</h4></header>
       <div class="slot liveb"><span class="tag live">Live</span><span class="when">Saturday, October 10, 1:00–4:00 PM</span>Orientation and foundations seminar, professor-led, closing with a structured debate.</div>
       <div class="slot"><span class="tag self">Self-study</span><span class="when">Saturday, 5 hours</span>Week 1 readings and review of the Orientation Module.</div>
-      <div class="slot dueb"><span class="tag due">Due Sunday, October 11, 8:00 PM</span><br><b>LPP Critical Reflection Paper #1</b><br>Share your Doctoral Learner Profile this week as well.</div>
+      <div class="slot dueb"><span class="when" style="margin-top:0">Sunday, October 11, 8 hours</span><b>Asynchronous Task 1: LPP Critical Reflection Paper #1</b><br><span class="tag due">Due Sunday, October 18</span><br>Share your Doctoral Learner Profile this week as well.</div>
     </article>
     <article class="week">
       <header><div class="wk">Week 2</div><div class="dt">October 17–18</div><h4>Philippine language-in-education policy</h4></header>
       <div class="slot"><span class="tag self">Self-study</span><span class="when">Saturday, October 17, 8 hours</span>Session 1, Philippine Language Policy I, and Session 2, Philippine Language Policy II. No live meeting.</div>
-      <div class="slot dueb"><span class="tag due">Due Sunday, October 18, 8:00 PM</span><br><b>Policy Genealogy and Critical Analysis Paper</b></div>
+      <div class="slot dueb"><span class="when" style="margin-top:0">Sunday, October 18, 8 hours</span><b>Asynchronous Task 2: Policy Genealogy and Critical Analysis Paper</b><br><span class="tag due">Due Sunday, October 25</span></div>
     </article>
     <article class="week">
       <header><div class="wk">Week 3</div><div class="dt">October 24–25</div><h4>Comparative policy and program planning</h4></header>
       <div class="slot"><span class="tag self">Self-study</span><span class="when">Saturday, October 24, 8 hours</span>Session 3, ASEAN and comparative contexts, then Sessions 4 and 5 on program planning. No live meeting. Sessions 6–8 are released today.</div>
-      <div class="slot dueb"><span class="tag due">Due Sunday, October 25, 8:00 PM</span><br><b>Language Program Plan (Draft)</b></div>
+      <div class="slot dueb"><span class="when" style="margin-top:0">Sunday, October 25, 8 hours</span><b>Asynchronous Task 3: Language Program Plan (Draft)</b><br><span class="tag due">Due Sunday, November 1</span></div>
     </article>
     <article class="week">
       <header><div class="wk">Week 4</div><div class="dt">October 31 – November 1</div><h4>Conference reports and course synthesis</h4></header>
       <div class="slot"><span class="tag self">Self-study</span><span class="when">From October 24</span>Sessions 6, 7 and 8, studied in the week before the conference.</div>
       <div class="slot liveb"><span class="tag live">Live</span><span class="when">Saturday, October 31, 1:00–4:00 PM</span>Conference reports by all three students, which also serve as the Policy Stakeholder Forum, then the course synthesis.</div>
-      <div class="slot dueb"><span class="tag due">Due Sunday, November 1, 8:00 PM</span><br><b>Final Portfolio and Reflective Commentary</b></div>
+      <div class="slot dueb"><span class="when" style="margin-top:0">Sunday, November 1, 8 hours</span><b>Asynchronous Task 4: Final Portfolio and Reflective Commentary</b><br><span class="tag due">Due Sunday, November 8</span></div>
     </article>
   </div>
-  <div class="key"><span><span class="tag live">Live</span> on MS Teams</span><span><span class="tag self">Self-study</span> at your own pace</span><span><span class="tag due">Due</span> posted to the week's Discussion channel</span></div>
+  <div class="key"><span><span class="tag live">Live</span> on MS Teams</span><span><span class="tag self">Self-study</span> at your own pace</span><span><span class="tag due">Due</span> seven days after each Sunday session, uploaded to the Submission Folder</span></div>
+  <div class="exams">
+    <article class="exam"><span class="tag live">Examination</span><h3>Final Examination</h3><p class="xd">Wednesday, November 4, 2026</p></article>
+    <article class="exam"><span class="tag live">Examination</span><h3>Midterm Examination</h3><p class="xd">Saturday, November 21, 2026</p></article>
+  </div>
 </div></section>
 
 <!-- ============ MODULES ============ -->
@@ -417,36 +425,36 @@ footer p{margin:0;max-width:52em}
 <!-- ============ TASKS ============ -->
 <section id="tasks"><div class="wrap">
   <div class="head">
-    <h2>Weekly tasks</h2>
+    <h2>Asynchronous tasks</h2>
     <p>The four tasks build on one another. If you choose your Week 1 policy well, it can carry you through to the final portfolio.</p>
   </div>
   <div class="tasks">
     <article class="task">
-      <div class="top"><span class="tag due">Week 1</span><span class="pct">10%</span></div>
+      <div class="top"><span class="tag due">Asynchronous Task 1</span><span class="pct">10%</span></div>
       <h3>LPP Critical Reflection Paper #1</h3>
       <p>Choose one language policy that operates in your own institution, written or unwritten. Analyze it with Spolsky's three components and Ruiz's orientations, and argue what the analysis reveals about who holds language-policy power.</p>
-      <div class="meta"><span class="tag self">1,500–2,000 words, APA 7</span><span class="tag self">50 points</span><span class="tag due">Sunday, October 11, 8:00 PM</span></div>
+      <div class="meta"><span class="tag self">1,500–2,000 words, APA 7</span><span class="tag self">50 points</span><span class="tag self">Assigned Sunday, October 11</span><span class="tag due">Due Sunday, October 18</span></div>
     </article>
     <article class="task">
-      <div class="top"><span class="tag due">Week 2</span><span class="pct">15%</span></div>
+      <div class="top"><span class="tag due">Asynchronous Task 2</span><span class="pct">15%</span></div>
       <h3>Policy Genealogy and Critical Analysis Paper</h3>
       <p>Choose one Philippine or ASEAN language-in-education policy. Trace what problem it claimed to solve, what it replaced, and who promoted or opposed it. Compare the text with the evidence on implementation and evaluate it with at least two Week 1 frameworks.</p>
-      <div class="meta"><span class="tag self">2,500–3,000 words, APA 7</span><span class="tag self">300-word abstract</span><span class="tag due">Sunday, October 18, 8:00 PM</span></div>
+      <div class="meta"><span class="tag self">2,500–3,000 words, APA 7</span><span class="tag self">300-word abstract</span><span class="tag self">Assigned Sunday, October 18</span><span class="tag due">Due Sunday, October 25</span></div>
     </article>
     <article class="task">
-      <div class="top"><span class="tag due">Week 3</span><span class="pct">15%</span></div>
+      <div class="top"><span class="tag due">Asynchronous Task 3</span><span class="pct">15%</span></div>
       <h3>Language Program Plan (Draft)</h3>
       <p>For a real or proposed program in your own context: a desk-based situation analysis, a needs-analysis plan, four to six outcomes aligned to a named framework, an outline of curriculum, staffing, materials, assessment and timeline, and a draft evaluation framework with a logic model.</p>
-      <div class="meta"><span class="tag self">Structured peer feedback</span><span class="tag due">Sunday, October 25, 8:00 PM</span></div>
+      <div class="meta"><span class="tag self">Structured peer feedback</span><span class="tag self">Assigned Sunday, October 25</span><span class="tag due">Due Sunday, November 1</span></div>
     </article>
     <article class="task">
-      <div class="top"><span class="tag due">Week 4</span><span class="pct">25% + 10%</span></div>
+      <div class="top"><span class="tag due">Asynchronous Task 4</span><span class="pct">25% + 10%</span></div>
       <h3>Final Portfolio and Reflective Commentary</h3>
       <p>The Language Policy Analysis and Program Development Portfolio moves from analysis to design to advocacy on one policy problem, and ends with a two-page policy brief to a named decision-maker. The Reflective Commentary explains your framework, your framing, and your own position as a policy actor.</p>
-      <div class="meta"><span class="tag self">15 components, see Course Guide, Section IX</span><span class="tag due">Sunday, November 1, 8:00 PM</span></div>
+      <div class="meta"><span class="tag self">15 components, see Course Guide, Section IX</span><span class="tag self">Assigned Sunday, November 1</span><span class="tag due">Due Sunday, November 8</span></div>
     </article>
   </div>
-  <p class="note"><b>Posting.</b> Post each task to that week's Discussion channel on MS Teams and reply substantively to both classmates. End every paper with a short statement of whether and how you used AI. Full instructions and the rubric for each task are in that week's companion module.</p>
+  <p class="note"><b>Submitting.</b> Each task is due seven days after its Sunday asynchronous session. Upload it to the <a href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Submission Folder</a>, and reply substantively to both classmates in that week's Discussion channel on MS Teams. End every paper with a short statement of whether and how you used AI. Full instructions and the rubric for each task are in that week's companion module.</p>
 </div></section>
 
 <!-- ============ CONFERENCE ============ -->
