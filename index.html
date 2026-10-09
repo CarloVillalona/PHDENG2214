@@ -42,7 +42,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .nav .brand{font-family:var(--display);font-weight:700;text-decoration:none;white-space:nowrap}
 .nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
 .nav ul::-webkit-scrollbar{display:none}
-.nav li a{display:block;padding:8px 12px;border-radius:999px;font-family:var(--display);font-size:15px;text-decoration:none;color:#f4e0dd;white-space:nowrap}
+.nav li a{display:block;padding:8px 10px;border-radius:999px;font-family:var(--display);font-size:15px;text-decoration:none;color:#f4e0dd;white-space:nowrap}
 .nav li a:hover{color:#fff;background:rgba(255,255,255,.1)}
 .nav li a.on{background:var(--marigold);color:var(--plum)}
 
@@ -187,6 +187,64 @@ h3{font-size:1.3rem;font-weight:700}
 .fine{margin:16px 0 0;font-size:16px}
 code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.86em;background:rgba(255,255,255,.12);padding:2px 7px;border-radius:6px}
 
+/* ---------- about, outcomes, the field ---------- */
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
+.about .prose p{max-width:38em}
+.about .prose p:first-child{font-size:1.18rem;line-height:1.55}
+.aside{border-left:4px solid var(--marigold);padding:4px 0 4px 22px}
+.aside h3{font-size:1.1rem;margin-bottom:8px}
+.aside p{font-size:16.5px}
+.aside ul{margin:0 0 18px;padding-left:18px;font-size:16px}
+.aside li{margin-bottom:4px}
+.sub{font-size:1.45rem;font-weight:700;margin:52px 0 8px}
+.subp{color:var(--muted);max-width:44em;margin:0 0 22px}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.level{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--plum);border-radius:var(--r);padding:22px 24px}
+.level .lv{font-family:var(--display);font-size:14px;font-weight:700;color:var(--muted)}
+.level h3{margin:4px 0 8px}
+.level p{margin:0;font-size:16.5px}
+.chain{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:20px 0 0;padding:0;font-family:var(--display);font-weight:700;font-size:15px}
+.chain li{background:var(--plum);color:#fff;padding:9px 16px;border-radius:999px;display:flex;align-items:center}
+.chain li:not(:last-child)::after{content:"";width:0;height:0;border:5px solid transparent;border-left:7px solid var(--marigold);margin-left:10px;margin-right:-8px}
+.chain li:last-child{background:var(--marigold);color:var(--plum)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0;font-family:var(--display);font-size:14.5px}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:6px 14px;background:#fff}
+.clos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 40px;border-top:1px solid var(--line)}
+.clos li{display:grid;grid-template-columns:74px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.clos .n{font-family:var(--display);font-weight:700;font-size:14px;color:var(--plum);background:var(--gold-soft);border-radius:8px;padding:4px 0;text-align:center;align-self:start}
+.clos b{font-family:var(--head);font-size:1.08rem;display:block;margin-bottom:2px}
+.clos span{font-size:16px;color:#3d2c2e}
+.themes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.theme{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px}
+.theme .lv{font-family:var(--display);font-size:14px;font-weight:700;color:var(--muted)}
+.theme h3{font-size:1.12rem;line-height:1.25;margin:4px 0 10px}
+.theme ul{margin:0;padding-left:18px;font-size:15.5px;line-height:1.5}
+.theme li{margin-bottom:5px}
+.qs{margin:0;padding-left:26px;columns:2;column-gap:44px;font-size:16.5px}
+.qs li{break-inside:avoid;margin-bottom:12px;padding-left:4px}
+.qs li::marker{font-family:var(--display);font-weight:700;color:var(--plum)}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:99px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{display:grid;grid-template-columns:76px 1fr;gap:48px;padding:0 0 22px;position:relative}
+.tl li::before{content:"";position:absolute;left:93px;top:8px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--plum)}
+.tl li.pivot::before{background:var(--marigold)}
+.tl .yr{font-family:var(--head);font-weight:700;font-size:1.35rem;color:var(--plum);text-align:right;line-height:1.3}
+.tl b{font-family:var(--head);font-size:1.08rem;display:block}
+.tl span{font-size:16px;color:#3d2c2e;display:block;max-width:44em}
+.scholars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 36px}
+.scholars h3{font-size:1.05rem;padding-bottom:8px;border-bottom:2px solid var(--plum);margin-bottom:10px}
+.scholars ul{list-style:none;margin:0;padding:0;font-size:15.5px;line-height:1.45}
+.scholars li{padding:6px 0;border-bottom:1px solid var(--line)}
+.scholars li b{font-family:var(--display);font-weight:600;display:block}
+.scholars li span{color:var(--muted)}
+.bm{width:100%;border-collapse:collapse;font-size:15.5px;line-height:1.45;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.bm th{font-family:var(--display);font-size:14px;text-align:left;background:var(--plum);color:#fff;padding:12px 16px}
+.bm td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+.bm td:first-child{font-family:var(--display);font-weight:600;width:27%}
+.bm .loc{background:#fcf7f6;font-family:var(--display);font-weight:700;font-size:14px;color:var(--plum)}
+.bmnote{font-size:15px;color:var(--muted);margin:10px 0 0}
+.regs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
 /* profile */
 .profile{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
 .sheet{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
@@ -245,14 +303,16 @@ footer p{margin:0;max-width:52em}
   .onion{justify-self:start;max-width:340px}
   .facts .wrap{grid-template-columns:1fr 1fr}
   .facts div{border:0;margin:0;padding:16px 12px 16px 0}
-  .start,.weeks,.exams,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
+  .about,.levels,.clos,.themes,.scholars,.regs,.start,.weeks,.exams,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
   .doc.first{grid-row:auto;min-height:0}
   .doc.first .n{margin-bottom:28px}
   .mod{grid-template-columns:44px 1fr;gap:6px 14px}
   .mod .tag,.mod .open{grid-column:2;justify-self:start}
   .bar{grid-template-columns:1fr 52px}
   .bar .track{grid-column:1/-1;grid-row:2}
-  .fields,.stds{columns:1}
+  .fields,.stds,.qs{columns:1}
+  .tl::before{left:63px}.tl li{grid-template-columns:48px 1fr;gap:34px}.tl li::before{left:57px}.tl .yr{font-size:1.05rem}
+  .bm thead{display:none}.bm,.bm tbody,.bm tr,.bm td{display:block;width:100%!important}.bm td{border-top:0;padding:4px 16px}.bm tr{border-top:1px solid var(--line);padding:10px 0}
   section{padding-top:60px}
   .nav .brand{display:none}
   .nav ul{margin-left:-8px}
@@ -266,14 +326,17 @@ footer p{margin:0;max-width:52em}
   <div class="wrap">
     <a class="brand" href="#top">PHDENG 2214</a>
     <ul>
+      <li><a href="#about">About</a></li>
       <li><a href="#start">Start here</a></li>
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#modules">Modules</a></li>
       <li><a href="#tasks">Tasks</a></li>
       <li><a href="#conference">October 31</a></li>
-      <li><a href="#profile">Learner profile</a></li>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#field">The field</a></li>
       <li><a href="#readings">Readings</a></li>
       <li><a href="#grading">Grading</a></li>
+      <li><a href="#standards">Standards</a></li>
       <li><a href="#policies">Policies</a></li>
     </ul>
   </div>
@@ -284,9 +347,10 @@ footer p{margin:0;max-width:52em}
     <div>
       <p class="course"><b>PHDENG 2214</b> &nbsp;Section 4-PHD-ENG-A &nbsp;|&nbsp; Module 4, 1st Semester, SY 2026–2027</p>
       <h1><span>Language Program Planning</span><span class="l2">and Policy Making</span></h1>
-      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School. Everything you need for the four weeks is linked from this page.</p>
+      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School. This site sets out what the course studies, how it is organized, and everything students need for the four weeks.</p>
       <div class="btns">
         <a class="btn solid" href="#start">Start here</a>
+        <a class="btn ghost" href="#about">About the course</a>
         <a class="btn ghost" href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Open the Submission Folder</a>
       </div>
     </div>
@@ -325,6 +389,71 @@ footer p{margin:0;max-width:52em}
 </div></aside>
 
 <main>
+
+<!-- ============ ABOUT ============ -->
+<section id="about"><div class="wrap">
+  <div class="head">
+    <h2>About the course</h2>
+    <p>A doctoral course in the PhD in English program that joins two fields usually taught apart: language policy and planning, and language program development and evaluation.</p>
+  </div>
+  <div class="about">
+    <div class="prose">
+      <p>This course examines how language policies are made, interpreted, contested, and implemented, and how language programs are planned, resourced, and evaluated in response to those policies.</p>
+      <p>It treats language policy and planning (LPP) as a field of research and as a field of professional action. Students study the major frameworks of the field (status, corpus, acquisition, and prestige planning; language practices, beliefs, and management; orientations to language as problem, right, and resource; the critical and ethnographic turns) and use them to analyze real policy texts and real programs.</p>
+      <p>The course gives particular attention to the Philippine language-in-education landscape, from the Bilingual Education Policy and Executive Order No. 210 to Mother Tongue-Based Multilingual Education (MTB-MLE) and its discontinuation as a medium of instruction under Republic Act No. 12027 (2024), and places it alongside ASEAN and international experience. It also addresses the practical work of language program development: situation and needs analysis, outcomes and standards (including the CEFR and the Philippine Qualifications Framework), curriculum design, implementation, and program evaluation.</p>
+      <p>Because this is a doctoral course, students move beyond describing policies. They problematize policy texts, weigh competing evidence, design a defensible language program, and communicate recommendations to decision-makers. The course culminates in a Language Policy Analysis and Program Development Portfolio that combines a critical policy analysis, a program plan with an evaluation framework, and a policy brief.</p>
+    </div>
+    <div class="aside">
+      <h3>Why it matters</h3>
+      <p>Which language children learn in, which languages are tested, which varieties of English are modeled, and which languages receive resources are policy choices with consequences for learning, identity, and equity. Doctoral graduates in English are increasingly asked to lead these decisions as program chairs, curriculum developers, school leaders, policy researchers, and advisers to DepEd, CHED, and local government.</p>
+      <h3>What sets it apart</h3>
+      <p>None of the benchmark courses combines policy analysis and program design in a single course. PHDENG 2214 deliberately joins the two: students analyze a policy, then design and evaluate the program that would put a defensible version of it into practice.</p>
+      <h3>Where the field sits</h3>
+      <ul>
+        <li>Sociolinguistics and the sociology of language</li>
+        <li>Applied linguistics and English language education</li>
+        <li>Bilingual and multilingual education</li>
+        <li>Curriculum design and program administration</li>
+        <li>Educational policy studies and public policy analysis</li>
+        <li>Program evaluation and educational measurement</li>
+        <li>Language rights, equity, and Indigenous education</li>
+        <li>World Englishes and English in ASEAN</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub">How the course thinks</h3>
+  <p class="subp">The course works at three levels throughout, and moves in a deliberate sequence from frameworks to reflection, not from policy summary to opinion to recommendation.</p>
+  <div class="levels">
+    <article class="level"><span class="lv">Level 1</span><h3>Analyze</h3><p>What does this policy say, where did it come from, and what framework helps us understand it?</p></article>
+    <article class="level"><span class="lv">Level 2</span><h3>Critique</h3><p>How is the problem represented, what evidence supports or contradicts it, and who gains or loses?</p></article>
+    <article class="level"><span class="lv">Level 3</span><h3>Design and advocate</h3><p>What program would put a defensible policy into practice, how would we evaluate it, and how do we persuade decision-makers?</p></article>
+  </div>
+  <ol class="chain" aria-label="Course progression">
+    <li>Framework</li><li>Policy analysis</li><li>Critique</li><li>Program design</li><li>Evaluation</li><li>Advocacy</li><li>Reflection</li>
+  </ol>
+
+  <h3 class="sub">How it is taught</h3>
+  <p class="subp">Because the students are doctoral candidates and many hold leadership positions, the course uses a seminar–studio model, not a lecture-heavy format.</p>
+  <ul class="chips">
+    <li>Doctoral seminar discussion</li><li>Policy text close reading</li><li>Scholarly reading circles</li><li>Critical policy analysis (WPR)</li><li>Stakeholder role-play</li><li>Comparative policy jigsaw</li><li>Case clinics</li><li>Logic-model workshops</li><li>Needs-analysis design</li><li>Policy brief writing</li><li>Policy stakeholder forum</li><li>Peer review</li><li>Reflective and positionality writing</li><li>Practitioner inquiry in one's own institution</li>
+  </ul>
+
+  <h3 class="sub" id="outcomes">Course learning outcomes</h3>
+  <p class="subp">By the end of the course, students should be able to do the following. The first four concern understanding and analyzing policy; the next three, planning, evaluating, and making it; the last three, the ethical, scholarly, and personal dimensions of that work.</p>
+  <ol class="clos">
+    <li><span class="n">CLO 1</span><div><b>Theoretical knowledge</b><span>Critically explain the major frameworks, models, and historical phases of language policy and planning scholarship.</span></div></li>
+    <li><span class="n">CLO 2</span><div><b>Policy analysis</b><span>Analyze language policy texts and discourses using established analytical approaches, including Spolsky's tripartite model, Ruiz's orientations, and Bacchi's "What's the Problem Represented to be?" approach.</span></div></li>
+    <li><span class="n">CLO 3</span><div><b>Philippine and regional contextualization</b><span>Trace the development of Philippine language-in-education policy and compare it with policies in ASEAN and other multilingual contexts.</span></div></li>
+    <li><span class="n">CLO 4</span><div><b>Evidence evaluation</b><span>Evaluate research evidence on medium of instruction, multilingual education, and English language programs, recognizing methodological strengths, limitations, and competing findings.</span></div></li>
+    <li><span class="n">CLO 5</span><div><b>Program planning</b><span>Design a language program grounded in situation and needs analysis, with outcomes aligned to recognized frameworks (CEFR, PQF, CHED outcomes-based education, DepEd curriculum standards).</span></div></li>
+    <li><span class="n">CLO 6</span><div><b>Program evaluation</b><span>Construct a program evaluation framework (evaluation questions, logic model, indicators, and data sources) that serves both improvement and accountability.</span></div></li>
+    <li><span class="n">CLO 7</span><div><b>Policy making and advocacy</b><span>Formulate and communicate evidence-informed policy options and recommendations to specific decision-makers and stakeholders.</span></div></li>
+    <li><span class="n">CLO 8</span><div><b>Equity and ethics</b><span>Assess language policies and programs in terms of language rights, inclusion, Indigenous peoples' education, learners with disabilities, and social justice.</span></div></li>
+    <li><span class="n">CLO 9</span><div><b>Scholarly contribution</b><span>Produce publishable-quality scholarly writing that contributes to the field, consistent with CHED expectations for doctoral students.</span></div></li>
+    <li><span class="n">CLO 10</span><div><b>Reflexive leadership</b><span>Critically reflect on one's positionality and agency as a language policy actor in one's own institution.</span></div></li>
+  </ol>
+</div></section>
 
 <!-- ============ START HERE ============ -->
 <section id="start"><div class="wrap">
@@ -600,6 +729,66 @@ footer p{margin:0;max-width:52em}
   </div>
 </div></section>
 
+<!-- ============ THE FIELD ============ -->
+<section id="field"><div class="wrap">
+  <div class="head">
+    <h2>The field of study</h2>
+    <p>What the course covers, the questions it keeps returning to, the Philippine policy history at its centre, and the scholars whose work it draws on.</p>
+  </div>
+
+  <h3 class="sub" style="margin-top:0">Six major themes</h3>
+  <div class="themes">
+    <article class="theme"><span class="lv">Theme 1</span><h3>Foundations of language policy and planning</h3><ul><li>Definitions and scope of LPP (Haugen, Cooper, Spolsky)</li><li>Status, corpus, acquisition, and prestige planning</li><li>Language practices, beliefs and ideologies, and management</li><li>Orientations: language as problem, right, and resource</li><li>Historical phases: classical, critical, and ethnographic LPP</li></ul></article>
+    <article class="theme"><span class="lv">Theme 2</span><h3>Language ideologies, rights, and power</h3><ul><li>Language ideologies and attitudes</li><li>Linguistic human rights and minority language rights</li><li>English as a global language and linguistic imperialism debates</li><li>Indigenous languages, revitalization, and Indigenous Peoples Education</li><li>Filipino Sign Language and inclusive language policy</li></ul></article>
+    <article class="theme"><span class="lv">Theme 3</span><h3>Language-in-education policy in the Philippines and ASEAN</h3><ul><li>Constitutional and statutory language provisions</li><li>Bilingual Education Policy and EO 210</li><li>MTB-MLE: design, implementation, evaluation, and discontinuation under RA 12027</li><li>Language policy in higher education</li><li>English in ASEAN; Singapore, Malaysia, Vietnam, Indonesia</li></ul></article>
+    <article class="theme"><span class="lv">Theme 4</span><h3>Language program planning and design</h3><ul><li>From policy to program: the planning cycle</li><li>Situation and needs analysis</li><li>Outcomes, standards, and frameworks (CEFR, PQF, OBE, MATATAG)</li><li>Curriculum, materials, teacher capacity, and assessment</li><li>Resourcing and implementation planning</li></ul></article>
+    <article class="theme"><span class="lv">Theme 5</span><h3>Program evaluation and evidence</h3><ul><li>Purposes and models of language program evaluation</li><li>Logic models, indicators, and data sources</li><li>Utilization-focused and stakeholder-oriented evaluation</li><li>Reading and weighing evidence on medium of instruction</li></ul></article>
+    <article class="theme"><span class="lv">Theme 6</span><h3>Policy analysis, policy making, and advocacy</h3><ul><li>The policy cycle</li><li>Critical policy analysis: "What's the Problem Represented to be?"</li><li>Ethnography of language policy</li><li>Research-to-policy engagement and writing policy briefs</li><li>Ethics, equity, and emerging issues (AI and language technologies)</li></ul></article>
+  </div>
+
+  <h3 class="sub">Twelve guiding questions</h3>
+  <p class="subp">Students return to these questions throughout the four weeks.</p>
+  <ol class="qs">
+    <li>What counts as language policy: the text, the practice, or the beliefs behind both?</li>
+    <li>Who makes language policy, and who is affected by it but excluded from making it?</li>
+    <li>Is language a problem to be solved, a right to be protected, or a resource to be developed, and what follows from each view?</li>
+    <li>Why do well-designed language-in-education policies so often fail at the point of implementation?</li>
+    <li>What does the Philippine shift from MTB-MLE to RA 12027 reveal about how evidence, ideology, and capacity interact in policy making?</li>
+    <li>How should English be positioned in a multilingual nation and in ASEAN?</li>
+    <li>What kind of evidence should count when language policy is decided?</li>
+    <li>How do we move from a policy aim to a coherent, resourced, and assessable language program?</li>
+    <li>How can a language program be evaluated so that the findings are actually used?</li>
+    <li>How can language policies protect the rights of Indigenous peoples, linguistic minorities, and learners with disabilities?</li>
+    <li>What is the responsible role of artificial intelligence and language technologies in language-in-education policy?</li>
+    <li>What is my own agency, as an educator and scholar, in shaping language policy in my institution?</li>
+  </ol>
+
+  <h3 class="sub">Philippine language-in-education policy, 1974 to 2025</h3>
+  <p class="subp">The course reads this sequence not as policy history alone but through one question: what problem did each policy claim to solve, whose interests did it serve, what happened when it reached classrooms, and what should be done now?</p>
+  <ol class="tl">
+    <li><span class="yr">1974</span><div><b>Bilingual Education Policy</b><span>Department of Education and Culture Order No. 25 assigns Filipino to social studies, music, arts, physical education, home economics, practical arts, and character education, and English to science, mathematics, and technology.</span></div></li>
+    <li class="pivot"><span class="yr">1987</span><div><b>The 1987 Constitution, Article XIV, Sections 6–9</b><span>Filipino is the national language. The official languages are Filipino and, "until otherwise provided by law," English; regional languages are auxiliary official languages and auxiliary media of instruction. DECS Order No. 52 restates the bilingual policy.</span></div></li>
+    <li><span class="yr">2003</span><div><b>Executive Order No. 210</b><span>English is taught as a second language from Grade 1 and becomes the primary medium of instruction in secondary school, for not less than 70% of total time.</span></div></li>
+    <li><span class="yr">2009</span><div><b>DepEd Order No. 74</b><span>Mother Tongue-Based Multilingual Education (MTB-MLE) is institutionalized.</span></div></li>
+    <li><span class="yr">2012</span><div><b>DepEd Order No. 16</b><span>MTB-MLE is implemented in Kindergarten to Grade 3 from SY 2012–2013, with twelve initial languages.</span></div></li>
+    <li class="pivot"><span class="yr">2013</span><div><b>Republic Act No. 10533, Section 4</b><span>Instruction, materials, and assessment in Kindergarten and the first three years of elementary education are to be in the regional or native language of learners. In higher education, CHED CMO No. 20 sets a general education curriculum in which Filipino and Panitikan are not required core courses.</span></div></li>
+    <li><span class="yr">2018</span><div><b>RA 11106 and G.R. No. 216930</b><span>The Filipino Sign Language Act declares FSL the national sign language of the Filipino deaf. The Supreme Court upholds RA 10533 and CMO No. 20.</span></div></li>
+    <li><span class="yr">2021</span><div><b>PIDS process evaluation of MTB-MLE</b><span>Fewer than 10% of schools are found to have completed the four required preparation activities.</span></div></li>
+    <li class="pivot"><span class="yr">2024</span><div><b>Republic Act No. 12027</b><span>Lapsing into law on October 10, 2024, it discontinues the mother tongue as medium of instruction in Kindergarten to Grade 3 and returns to Filipino and English, with regional languages as auxiliary media. The mother tongue remains allowed in monolingual classes under conditions; DepEd must map languages within a year and review every three years.</span></div></li>
+    <li><span class="yr">2025</span><div><b>DepEd Memorandum No. 59</b><span>The implementing rules and regulations of RA 12027 are disseminated.</span></div></li>
+  </ol>
+
+  <h3 class="sub">Scholars and traditions</h3>
+  <p class="subp">Students read primary policy texts and peer-reviewed scholarship, not summaries or news commentary. Books that are not openly available can be accessed through the UPHSD library or your own institutional library.</p>
+  <div class="scholars">
+    <div><h3>Foundational LPP scholarship</h3><ul><li><b>Einar Haugen</b><span>language planning model; ecology of language</span></li><li><b>Robert L. Cooper</b><span>language planning and social change</span></li><li><b>Joshua A. Fishman</b><span>sociology of language</span></li><li><b>Bernard Spolsky</b><span>language policy theory</span></li><li><b>Robert B. Kaplan and Richard B. Baldauf Jr.</b><span>language planning from practice to theory</span></li><li><b>Richard Ruiz</b><span>orientations in language planning</span></li></ul></div>
+    <div><h3>Critical and ethnographic LPP</h3><ul><li><b>Nancy H. Hornberger</b><span>integrative framework; ethnography of language policy</span></li><li><b>Thomas Ricento</b><span>history and theory of LPP</span></li><li><b>James W. Tollefson</b><span>critical language policy</span></li><li><b>David Cassels Johnson</b><span>ethnography of language policy</span></li><li><b>Elana Shohamy</b><span>hidden language policy mechanisms; tests as policy</span></li><li><b>Tove Skutnabb-Kangas</b><span>linguistic human rights</span></li></ul></div>
+    <div><h3>Philippine and Asian scholarship</h3><ul><li><b>Andrew Gonzalez, FSC and Bonifacio P. Sibayan</b><span>Philippine language planning and bilingual education</span></li><li><b>Ma. Lourdes S. Bautista and Isabel Pefianco Martin</b><span>Philippine English and English in Philippine education</span></li><li><b>Ruanni Tupas</b><span>language ideologies and inequality in Philippine education</span></li><li><b>Allan B. I. Bernardo</b><span>English in Philippine education</span></li><li><b>Andy Kirkpatrick and Anthony J. Liddicoat</b><span>language education policy in Asia</span></li></ul></div>
+    <div><h3>Program development and evaluation</h3><ul><li><b>James Dean Brown</b><span>the elements of language curriculum</span></li><li><b>Jack C. Richards</b><span>curriculum development in language teaching</span></li><li><b>I. S. P. Nation and John Macalister</b><span>language curriculum design</span></li><li><b>John M. Norris</b><span>language program evaluation</span></li><li><b>Richard Kiely and Pauline Rea-Dickins</b><span>program evaluation in language education</span></li></ul></div>
+    <div><h3>Policy analysis</h3><ul><li><b>Carol Bacchi</b><span>"What's the Problem Represented to be?"</span></li><li><b>Stephen J. Ball</b><span>policy sociology and policy enactment</span></li></ul></div>
+  </div>
+</div></section>
+
 <!-- ============ READINGS ============ -->
 <section id="readings"><div class="wrap">
   <div class="head">
@@ -685,6 +874,25 @@ footer p{margin:0;max-width:52em}
       <li>Scholarly and professional communication at a publishable standard</li>
     </ul>
   </div>
+</div></section>
+
+<!-- ============ STANDARDS ============ -->
+<section id="standards"><div class="wrap">
+  <div class="head">
+    <h2>Standards and benchmarking</h2>
+    <p>The course is aligned with national standards for doctoral education and benchmarked against graduate courses in language planning, language policy, and language program development in the Philippines and abroad.</p>
+  </div>
+  <div class="regs">
+    <article class="level"><span class="lv">CHED</span><h3>CMO No. 15, s. 2019, as amended by CMO No. 21, s. 2025</h3><p>Policies, Standards and Guidelines for Graduate Programs. The final portfolio is written to manuscript standard so that the critical policy analysis can be developed into a journal article or a dissertation chapter.</p></article>
+    <article class="level"><span class="lv">CHED</span><h3>CMO No. 46, s. 2012</h3><p>Outcomes-based and typology-based quality assurance. Outcomes are stated as demonstrable outcomes, and every task and rubric criterion maps to one.</p></article>
+    <article class="level"><span class="lv">Republic Act No. 10968 (2018)</span><h3>Philippine Qualifications Framework, Level 8</h3><p>Doctoral level: highly advanced, systematic knowledge and full independence and leadership in research. Students work independently on a self-selected policy problem.</p></article>
+  </div>
+  <h3 class="sub">Benchmark courses</h3>
+  <table class="bm">
+    <thead><tr><th>Institution</th><th>Course(s) reviewed</th><th>Feature incorporated</th></tr></thead>
+    <tbody><tr><td class="loc" colspan="3">Philippines</td></tr><tr><td>De La Salle University (PhD Applied Linguistics)</td><td>LIN831D Approaches to Language Planning; LIN632D Bilingualism and Bilingual Education</td><td>Philippine language planning as the anchor; bilingual education research</td></tr><tr><td>University of the Philippines Diliman (College of Education)</td><td>EDL 365 Planning and Administration of Language Programs; EDL 361 Instructional Management of Bilingual Education Programs</td><td>Language programs as objects of planning and administration</td></tr><tr><td>Ateneo de Zamboanga University (PhD Language Studies)</td><td>LS 615 Sociolinguistics (with Linguistic Anthropology and Language Planning)</td><td>Sociolinguistic and anthropological grounding of planning</td></tr><tr><td>Lyceum of the Philippines University–Batangas (PhD English Language Studies)</td><td>DP ENGL 801 Language and Literature Curriculum Innovation; DP ENGL 811 Language Assessment and Program Evaluation</td><td>Curriculum innovation paired with program evaluation</td></tr><tr><td class="loc" colspan="3">International</td></tr><tr><td>University of Pennsylvania (PhD Educational Linguistics)</td><td>EDUC 9205 Research Seminar: Language Policy and Education</td><td>Doctoral research seminar; ethnographic and critical LPP tradition</td></tr><tr><td>University of Hawaiʻi at Mānoa (Second Language Studies)</td><td>SLS 630 Second Language Program Development</td><td>Systems approach to designing, implementing, and evaluating language programs</td></tr><tr><td>UCL Institute of Education</td><td>CCME0147 Language, Politics and Education; CPAS0147 Multilingual Perspectives on Education</td><td>Equity, ideology, and multilingual education planning</td></tr><tr><td>National Institute of Education, Singapore (MA Applied Linguistics)*</td><td>MAE905 Language Curriculum: Theory &amp; Practice; MAE903 Sociolinguistic Perspectives on the Classroom</td><td>Asian multilingual, state-planned context; curriculum analysis and design</td></tr><tr><td>University of Massachusetts Amherst</td><td>EDUC 615S Language and Literacy Policy and Planning</td><td>Case-based study of ideology and educational language policy; applied curriculum project</td></tr></tbody>
+  </table>
+  <p class="bmnote">* Master's-level courses, included for their Asian multilingual context. Source: Course Guide, Sections IV and XVI.</p>
 </div></section>
 
 <!-- ============ POLICIES ============ -->
