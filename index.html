@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="author" content="Carlo S. Villalona, LPT, PhD">
+<meta name="robots" content="noindex">
+<meta name="description" content="Class site for PHDENG 2214 Language Program Planning and Policy Making, Section 4-PHD-ENG-A, UPHSD Graduate School.">
+<title>Language Program Planning and Policy Making 4-PHD-ENG-A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#5c0f1c;        /* hero and footer ground */
+  --plum-2:#74182a;
+  --ink:#241517;
+  --muted:#6a5759;
+  --paper:#ffffff;
+  --card:#ffffff;
+  --line:#e7d8d6;
+  --marigold:#f2b705;    /* live sessions, primary actions */
+  --teal-soft:#f8efee;   /* pale maroon tint for notes */
+  --gold-soft:#fdf1cf;
+  --display:"Public Sans",system-ui,sans-serif;
+  --head:"Source Serif 4",Georgia,serif;
+  --body:"Source Serif 4",Georgia,serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.12;margin:0;letter-spacing:-.012em}
+p{margin:0 0 1em}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--marigold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:20;background:rgba(92,15,28,.97);backdrop-filter:blur(8px);color:#fff}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:56px}
+.nav .brand{font-family:var(--display);font-weight:700;text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li a{display:block;padding:8px 12px;border-radius:999px;font-family:var(--display);font-size:15px;text-decoration:none;color:#f4e0dd;white-space:nowrap}
+.nav li a:hover{color:#fff;background:rgba(255,255,255,.1)}
+.nav li a.on{background:var(--marigold);color:var(--plum)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--plum);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:64px}
+.hero .course{font-family:var(--display);font-size:16px;color:#f1d9d6;margin-bottom:22px}
+.hero .course b{color:var(--marigold);font-weight:700}
+.hero h1{font-size:clamp(2.4rem,5vw,3.9rem);font-weight:700;letter-spacing:-.02em}
+.hero h1 span{display:block}
+.hero h1 .l2{color:var(--marigold)}
+.hero .lede{font-size:1.15rem;color:#f8eae8;max-width:34em;margin:26px 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none;padding:13px 22px;border-radius:999px;border:2px solid transparent;cursor:pointer}
+.btn.solid{background:var(--marigold);color:var(--plum)}
+.btn.solid:hover{background:#ffc933}
+.btn.ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn.ghost:hover{border-color:#fff}
+.btn.dark{background:var(--plum);color:#fff}
+.btn.dark:hover{background:var(--plum-2)}
+.btn.line{border-color:var(--plum);color:var(--plum);background:transparent}
+.btn.line:hover{background:var(--plum);color:#fff}
+
+.onion{width:100%;max-width:440px;justify-self:end}
+.onion text{font-family:var(--display);font-size:13px;fill:#fff}
+.onion .cap{font-size:12px;fill:#f1d9d6}
+.onion circle{transform-origin:220px 220px;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+.onion circle:nth-of-type(2){animation-delay:.08s}
+.onion circle:nth-of-type(3){animation-delay:.16s}
+.onion circle:nth-of-type(4){animation-delay:.24s}
+.onion circle:nth-of-type(5){animation-delay:.32s}
+@keyframes grow{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){.onion circle{animation:none}html{scroll-behavior:auto}}
+
+.facts{background:var(--plum-2);color:#fff;border-top:4px solid var(--marigold)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.facts div{padding:22px 20px 22px 0;border-right:1px solid rgba(255,255,255,.14);margin-right:20px}
+.facts div:last-child{border:0;margin:0}
+.facts dt{font-family:var(--display);font-size:14px;color:#f1d9d6;margin-bottom:4px}
+.facts dd{margin:0;font-family:var(--display);font-weight:600;font-size:17px;line-height:1.3}
+dl{margin:0}
+
+/* ---------- sections ---------- */
+section{padding:84px 0 12px}
+.head{max-width:44em;margin-bottom:34px}
+.head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:700;margin-bottom:12px}
+.head p{color:var(--muted);margin:0}
+h3{font-size:1.3rem;font-weight:700}
+.tag{display:inline-block;font-family:var(--display);font-size:13.5px;font-weight:700;padding:3px 11px;border-radius:999px;line-height:1.5}
+.tag.live{background:var(--marigold);color:var(--plum)}
+.tag.self{background:#fff;color:var(--plum);box-shadow:inset 0 0 0 1.5px var(--plum)}
+.tag.due{background:var(--plum);color:#fff}
+.tag.a{background:var(--gold-soft);color:var(--plum)}
+.tag.b{background:var(--gold-soft);color:var(--plum)}
+.tag.c{background:var(--gold-soft);color:var(--plum)}
+
+/* start here */
+.start{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px}
+.doc{box-shadow:0 1px 0 var(--line);display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;text-decoration:none;transition:border-color .15s,transform .15s}
+.doc:hover{border-color:var(--plum);transform:translateY(-2px)}
+.doc h3{margin-bottom:8px}
+.doc p{font-size:16px;color:var(--muted);margin:0 0 18px}
+.doc .go{margin-top:auto;font-family:var(--display);font-weight:700;font-size:15px;color:var(--plum);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--marigold);text-decoration-thickness:2px}
+.doc.first{grid-row:span 2;background:var(--plum);color:#fff;border-color:var(--plum);justify-content:flex-end;min-height:300px}
+.doc.first h3{font-size:2rem}
+.doc.first p{color:#f4e0dd;font-size:17px}
+.doc.first .go{color:var(--marigold)}
+.doc.first .n{font-family:var(--display);font-size:15px;color:var(--marigold);margin-bottom:auto}
+
+/* schedule */
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.week{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.week header{padding:18px 20px 14px;border-bottom:1px solid var(--line)}
+.week header .wk{font-family:var(--head);font-weight:700;font-size:1.5rem}
+.week header .dt{font-family:var(--display);font-size:15px;color:var(--muted)}
+.week h4{font-size:1.05rem;font-weight:700;line-height:1.25;margin-top:10px}
+.slot{padding:14px 20px;border-bottom:1px dashed var(--line);font-size:16px;line-height:1.45}
+.slot:last-child{border:0}
+.slot .when{font-family:var(--display);font-size:14px;color:var(--muted);display:block;margin:6px 0 2px}
+.slot.liveb{background:var(--gold-soft)}
+.slot.dueb{background:#fcf7f6;margin-top:auto}
+.slot.dueb .tag{border-radius:8px;margin-bottom:4px}
+.slot b{font-family:var(--display)}
+.key{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-family:var(--display);font-size:15px;color:var(--muted)}
+
+/* modules */
+.mods{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.mod{display:grid;grid-template-columns:64px 1fr auto auto;gap:18px;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line);text-decoration:none}
+.mod:last-child{border:0}
+.mod:hover{background:#fdf9f8}
+.mod .no{font-family:var(--head);font-weight:700;font-size:1.7rem;color:var(--plum)}
+.mod .t{font-family:var(--head);font-weight:700;font-size:1.1rem;line-height:1.25}
+.mod .s{font-size:15.5px;color:var(--muted);display:block;font-family:var(--body);font-weight:400;margin-top:3px}
+.mod .open{font-family:var(--display);font-weight:700;font-size:15px;color:var(--plum);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--marigold);text-decoration-thickness:2px;white-space:nowrap}
+.mod.zero,.mod.zero:hover{background:var(--gold-soft)}
+.wkrow{padding:10px 22px;background:#f6eceb;font-family:var(--display);font-weight:700;font-size:15px;border-bottom:1px solid var(--line)}
+
+/* tasks */
+.tasks{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.task{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.task .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.task .pct{font-family:var(--head);font-weight:700;font-size:2rem;color:var(--plum);white-space:nowrap}
+.task h3{margin-bottom:10px}
+.task p{font-size:16.5px}
+.task .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.note{background:var(--teal-soft);border-radius:var(--r);padding:18px 22px;margin-top:16px;font-size:16.5px}
+.note b{font-family:var(--display)}
+
+/* conference */
+.conf{background:var(--plum);color:#fff;margin-top:84px;padding:84px 0}
+.conf .head p{color:#f4e0dd}
+.strands{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.strand{background:#fff;color:var(--ink);border-radius:var(--r);padding:24px;display:flex;flex-direction:column}
+.strand .who{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-family:var(--display);font-size:15px;color:var(--muted)}
+.strand h3{margin-bottom:10px;font-size:1.2rem;line-height:1.2}
+.strand p{font-size:16px}
+.strand details{margin:0 0 16px;font-size:15.5px}
+.strand summary{font-family:var(--display);font-weight:700;cursor:pointer;color:var(--plum)}
+.strand ol{margin:10px 0 0;padding-left:20px}
+.strand li{margin-bottom:6px}
+.strand .btn{margin-top:auto;text-align:center;font-size:15px;padding:11px 16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.panel{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--r);padding:26px}
+.panel h3{margin-bottom:14px}
+.run{list-style:none;margin:0;padding:0;font-size:16px}
+.run li{display:grid;grid-template-columns:104px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.run li:last-child{border:0}
+.run .tm{font-family:var(--display);font-weight:700;color:var(--marigold)}
+.rules{margin:0;padding-left:20px;font-size:16.5px}
+.rules li{margin-bottom:8px}
+.rub{width:100%;border-collapse:collapse;font-size:16px}
+.rub td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.rub td:last-child{text-align:right;font-family:var(--display);font-weight:700;color:var(--marigold);width:56px}
+.rub tr:last-child td{border:0;font-family:var(--display);font-weight:700}
+.fine{margin:16px 0 0;font-size:16px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.86em;background:rgba(255,255,255,.12);padding:2px 7px;border-radius:6px}
+
+/* profile */
+.profile{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
+.sheet{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.sheet h3{margin-bottom:14px}
+.fields{list-style:none;margin:0;padding:0;columns:2;column-gap:28px;font-size:16px}
+.fields li{break-inside:avoid;padding:8px 0;border-bottom:1px solid var(--line)}
+.steps{margin:0 0 22px;padding-left:22px}
+.steps li{margin-bottom:8px}
+.profile .note{margin-top:24px}
+
+/* readings */
+.read details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px}
+.read summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;font-family:var(--display);font-weight:700;font-size:1.15rem}
+.read summary::-webkit-details-marker{display:none}
+.read summary small{font-weight:400;font-size:15px;color:var(--muted)}
+.read summary::after{content:"+";font-size:1.6rem;font-weight:400;color:var(--plum);line-height:1}
+.read details[open] summary::after{content:"\2212"}
+.read ol{margin:0;padding:0 24px 18px 46px;font-size:16.5px}
+.read li{padding:10px 0;border-top:1px solid var(--line)}
+.read li a{font-family:var(--display);font-weight:700;font-size:15px;color:var(--plum);text-underline-offset:4px;text-decoration-color:var(--marigold);text-decoration-thickness:2px;white-space:nowrap}
+.read .opt{font-family:var(--display);font-size:13.5px;color:var(--muted)}
+
+/* grading */
+.bars{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 26px}
+.bar{display:grid;grid-template-columns:minmax(220px,1.3fr) 2fr 56px;gap:18px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.bar:last-child{border:0}
+.bar .nm{font-family:var(--head);font-weight:700;font-size:1.02rem;line-height:1.25}
+.bar .nm small{display:block;font-family:var(--body);font-weight:400;font-size:15px;color:var(--muted)}
+.bar .track{height:14px;background:#f6eceb;border-radius:999px;overflow:hidden}
+.bar .track i{display:block;height:100%;background:var(--plum);border-radius:999px}
+.bar.big .track i{background:var(--marigold)}
+.bar .v{font-family:var(--head);font-weight:700;font-size:1.3rem;text-align:right}
+.stds{columns:2;column-gap:40px;margin:14px 0 0;padding-left:20px;font-size:16.5px}
+.stds li{break-inside:avoid;margin-bottom:6px}
+
+/* policies */
+.pols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pol{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;font-size:16.5px}
+.pol h3{margin-bottom:12px}
+.pol ul{margin:0;padding-left:20px}
+.pol li{margin-bottom:8px}
+.pol b{font-family:var(--display)}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:#f6eceb;border-radius:10px;padding:10px 12px;margin:0 0 14px;font-family:var(--display);font-size:15px;word-break:break-all}
+.mail button{font-family:var(--display);font-weight:700;font-size:14px;border:0;background:var(--plum);color:#fff;border-radius:999px;padding:6px 14px;cursor:pointer}
+
+/* quote and footer */
+.quote{padding:96px 0}
+.quote blockquote{margin:0;max-width:22em;font-family:var(--head);font-weight:600;font-size:clamp(1.6rem,3.6vw,2.6rem);line-height:1.16;letter-spacing:-.02em}
+.quote blockquote mark{background:linear-gradient(transparent 62%,var(--marigold) 62%);color:inherit}
+.quote cite{display:block;margin-top:20px;font-style:normal;font-family:var(--display);font-size:15px;color:var(--muted)}
+footer{background:var(--plum);color:#f1d9d6;padding:36px 0;font-size:15.5px}
+footer p{margin:0;max-width:52em}
+
+@media (max-width:920px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:48px}
+  .onion{justify-self:start;max-width:340px}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .facts div{border:0;margin:0;padding:16px 12px 16px 0}
+  .start,.weeks,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
+  .doc.first{grid-row:auto;min-height:0}
+  .doc.first .n{margin-bottom:28px}
+  .mod{grid-template-columns:44px 1fr;gap:6px 14px}
+  .mod .tag,.mod .open{grid-column:2;justify-self:start}
+  .bar{grid-template-columns:1fr 52px}
+  .bar .track{grid-column:1/-1;grid-row:2}
+  .fields,.stds{columns:1}
+  section{padding-top:60px}
+  .nav .brand{display:none}
+  .nav ul{margin-left:-8px}
+}
+@media (max-width:480px){body{font-size:17px}.wrap{padding:0 16px}.facts .wrap{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="brand" href="#top">PHDENG 2214</a>
+    <ul>
+      <li><a href="#start">Start here</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#modules">Modules</a></li>
+      <li><a href="#tasks">Tasks</a></li>
+      <li><a href="#conference">October 31</a></li>
+      <li><a href="#profile">Learner profile</a></li>
+      <li><a href="#readings">Readings</a></li>
+      <li><a href="#grading">Grading</a></li>
+      <li><a href="#policies">Policies</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="course"><b>PHDENG 2214</b> &nbsp;Section 4-PHD-ENG-A &nbsp;|&nbsp; Module 4, 1st Semester, SY 2026–2027</p>
+      <h1><span>Language Program Planning</span><span class="l2">and Policy Making</span></h1>
+      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School. Everything you need for the four weeks is linked from this page.</p>
+      <div class="btns">
+        <a class="btn solid" href="#start">Start here</a>
+        <a class="btn ghost" href="https://drive.google.com/drive/folders/1dKfNtWpReKLUw0FlrHc4YwSd1YiYKNt8" target="_blank" rel="noopener">Open the course folder</a>
+      </div>
+    </div>
+
+    <svg class="onion" viewBox="0 0 440 440" role="img" aria-labelledby="onionT onionD">
+      <title id="onionT">The layers of language policy</title>
+      <desc id="onionD">Five nested circles, from the supranational layer on the outside to the classroom and community at the centre.</desc>
+      <circle cx="220" cy="220" r="212" fill="#6a1423"/>
+      <circle cx="220" cy="220" r="170" fill="#7c1b2c"/>
+      <circle cx="220" cy="220" r="128" fill="#92283a"/>
+      <circle cx="220" cy="220" r="86"  fill="#ad4457"/>
+      <circle cx="220" cy="220" r="46"  fill="#f2b705"/>
+      <text x="220" y="34"  text-anchor="middle">Supranational and regional</text>
+      <text x="220" y="76"  text-anchor="middle">National</text>
+      <text x="220" y="118" text-anchor="middle">Regional and division</text>
+      <text x="220" y="160" text-anchor="middle">Institutional</text>
+      <text x="220" y="216" text-anchor="middle" style="fill:#5c0f1c;font-weight:700">Classroom</text>
+      <text x="220" y="233" text-anchor="middle" style="fill:#5c0f1c;font-weight:700">and community</text>
+      <text class="cap" x="220" y="418" text-anchor="middle">Policy is made at every layer</text>
+    </svg>
+  </div>
+</header>
+
+<div class="facts">
+  <dl class="wrap">
+    <div><dt>Live sessions</dt><dd>Saturdays, October 10 and 31<br>1:00–4:00 PM, online</dd></div>
+    <div><dt>Dates</dt><dd>October 10 – November 1, 2026</dd></div>
+    <div><dt>Professor</dt><dd>Carlo S. Villalona, LPT, PhD</dd></div>
+    <div><dt>Learning time</dt><dd>64 hours: 6 live, 58 self-study and independent work</dd></div>
+  </dl>
+</div>
+
+<main>
+
+<!-- ============ START HERE ============ -->
+<section id="start"><div class="wrap">
+  <div class="head">
+    <h2>Start here</h2>
+    <p>Three documents and one template set up the whole module. Open the Course Guide first, then read the Orientation Module before the October 10 session.</p>
+  </div>
+  <div class="start">
+    <a class="doc first" href="https://drive.google.com/file/d/14t6MDxOngSvDU7xWC0KPaV66nV1RxXUA/view" target="_blank" rel="noopener">
+      <span class="n">Read this first</span>
+      <h3>Course Guide</h3>
+      <p>Course description, the ten learning outcomes, the weekly topics and tasks, the assessment plan, the final portfolio, and the verified reading list.</p>
+      <span class="go">Open the Course Guide</span>
+    </a>
+    <a class="doc" href="https://drive.google.com/file/d/17ESfmiw1DaUghSFsAFsBskLIUlJWpvWT/view" target="_blank" rel="noopener">
+      <h3>Orientation Module</h3>
+      <p>How the course works (Part A) and the foundations seminar on language policy and planning (Part B). Includes the Week 1 task and rubric.</p>
+      <span class="go">Open the Orientation Module</span>
+    </a>
+    <a class="doc" href="https://drive.google.com/file/d/1-AYc-coE8_FdbdWyZIbvVneNhPDBPMK3/view" target="_blank" rel="noopener">
+      <h3>Conference Reporting and Companion Module</h3>
+      <p>Your strand, its inquiry questions, the October 31 running order, and Rubrics A and B.</p>
+      <span class="go">Open the reporting guide</span>
+    </a>
+    <a class="doc" href="https://canva.link/vzdwkfd5c09vydz" target="_blank" rel="noopener">
+      <h3>Doctoral Learner Profile</h3>
+      <p>The one-page Canva template you fill in and share with the class before the end of Week 1.</p>
+      <span class="go">Open the Canva template</span>
+    </a>
+    <a class="doc" href="https://drive.google.com/drive/folders/1dKfNtWpReKLUw0FlrHc4YwSd1YiYKNt8" target="_blank" rel="noopener">
+      <h3>Course folder</h3>
+      <p>Every file on this page lives in one Google Drive folder, along with the slide templates and the submission folder.</p>
+      <span class="go">Open the folder</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- ============ SCHEDULE ============ -->
+<section id="schedule"><div class="wrap">
+  <div class="head">
+    <h2>Four weekends</h2>
+    <p>We meet live twice, on the first and last Saturdays. Weeks 2 and 3 are fully self-paced. Every Sunday carries eight hours of independent work and a task due at 8:00 PM, Philippine time.</p>
+  </div>
+  <div class="weeks">
+    <article class="week">
+      <header><div class="wk">Week 1</div><div class="dt">October 10–11</div><h4>What is language policy and planning?</h4></header>
+      <div class="slot liveb"><span class="tag live">Live</span><span class="when">Saturday, October 10, 1:00–4:00 PM</span>Orientation and foundations seminar, professor-led, closing with a structured debate.</div>
+      <div class="slot"><span class="tag self">Self-study</span><span class="when">Saturday, 5 hours</span>Week 1 readings and review of the Orientation Module.</div>
+      <div class="slot dueb"><span class="tag due">Due Sunday, October 11, 8:00 PM</span><br><b>LPP Critical Reflection Paper #1</b><br>Share your Doctoral Learner Profile this week as well.</div>
+    </article>
+    <article class="week">
+      <header><div class="wk">Week 2</div><div class="dt">October 17–18</div><h4>Philippine language-in-education policy</h4></header>
+      <div class="slot"><span class="tag self">Self-study</span><span class="when">Saturday, October 17, 8 hours</span>Session 1, Philippine Language Policy I, and Session 2, Philippine Language Policy II. No live meeting.</div>
+      <div class="slot dueb"><span class="tag due">Due Sunday, October 18, 8:00 PM</span><br><b>Policy Genealogy and Critical Analysis Paper</b></div>
+    </article>
+    <article class="week">
+      <header><div class="wk">Week 3</div><div class="dt">October 24–25</div><h4>Comparative policy and program planning</h4></header>
+      <div class="slot"><span class="tag self">Self-study</span><span class="when">Saturday, October 24, 8 hours</span>Session 3, ASEAN and comparative contexts, then Sessions 4 and 5 on program planning. No live meeting. Sessions 6–8 are released today.</div>
+      <div class="slot dueb"><span class="tag due">Due Sunday, October 25, 8:00 PM</span><br><b>Language Program Plan (Draft)</b></div>
+    </article>
+    <article class="week">
+      <header><div class="wk">Week 4</div><div class="dt">October 31 – November 1</div><h4>Conference reports and course synthesis</h4></header>
+      <div class="slot"><span class="tag self">Self-study</span><span class="when">From October 24</span>Sessions 6, 7 and 8, studied in the week before the conference.</div>
+      <div class="slot liveb"><span class="tag live">Live</span><span class="when">Saturday, October 31, 1:00–4:00 PM</span>Conference reports by all three students, which also serve as the Policy Stakeholder Forum, then the course synthesis.</div>
+      <div class="slot dueb"><span class="tag due">Due Sunday, November 1, 8:00 PM</span><br><b>Final Portfolio and Reflective Commentary</b></div>
+    </article>
+  </div>
+  <div class="key"><span><span class="tag live">Live</span> on MS Teams</span><span><span class="tag self">Self-study</span> at your own pace</span><span><span class="tag due">Due</span> posted to the week's Discussion channel</span></div>
+</div></section>
+
+<!-- ============ MODULES ============ -->
+<section id="modules"><div class="wrap">
+  <div class="head">
+    <h2>Session companion modules</h2>
+    <p>One module for the orientation and one for each of the eight sessions. Each reproduces that week's task and rubric. Study every session, not only the ones behind your strand: you will be questioning both classmates on October 31.</p>
+  </div>
+  <div class="mods">
+    <a class="mod zero" href="https://drive.google.com/file/d/17ESfmiw1DaUghSFsAFsBskLIUlJWpvWT/view" target="_blank" rel="noopener">
+      <span class="no">0</span><span class="t">Orientation and Course Overview<span class="s">What is language policy and planning? Companion to the October 10 live session.</span></span><span class="tag live">Week 1</span><span class="open">Open PDF</span></a>
+    <div class="wkrow">Week 2, self-study on October 17</div>
+    <a class="mod" href="https://drive.google.com/file/d/1ZMRR5y8UwYo58QYr5PlDQkJ9yWPzoLft/view" target="_blank" rel="noopener">
+      <span class="no">1</span><span class="t">Philippine Language Policy I<span class="s">From the Constitution to the Bilingual Education Policy and Executive Order No. 210.</span></span><span class="tag a">Strand A</span><span class="open">Open PDF</span></a>
+    <a class="mod" href="https://drive.google.com/file/d/1PHwf0gDkfx5DQMCRjDgU4BkSzk4Fx477/view" target="_blank" rel="noopener">
+      <span class="no">2</span><span class="t">Philippine Language Policy II<span class="s">MTB-MLE and its discontinuation under Republic Act No. 12027.</span></span><span class="tag a">Strand A</span><span class="open">Open PDF</span></a>
+    <div class="wkrow">Week 3, self-study on October 24</div>
+    <a class="mod" href="https://drive.google.com/file/d/1QdHoXuyDCWy2gJa-iEfihw8l_uH84_g7/view" target="_blank" rel="noopener">
+      <span class="no">3</span><span class="t">Language Policy in ASEAN and Comparative Contexts<span class="s">English in ASEAN, with Singapore, Malaysia, Vietnam, and Indonesia as cases.</span></span><span class="tag b">Strand B</span><span class="open">Open PDF</span></a>
+    <a class="mod" href="https://drive.google.com/file/d/1hULEv37b4nz4TOjHi7OxH8CPy6GaMpM2/view" target="_blank" rel="noopener">
+      <span class="no">4</span><span class="t">Program Planning I<span class="s">Situation analysis, needs analysis, outcomes, and standards.</span></span><span class="tag b">Strand B</span><span class="open">Open PDF</span></a>
+    <a class="mod" href="https://drive.google.com/file/d/18mtQMO2y8Ijia1qaSTcHPvckWm7t6vnV/view" target="_blank" rel="noopener">
+      <span class="no">5</span><span class="t">Program Planning II<span class="s">Curriculum design, implementation, and resourcing.</span></span><span class="tag b">Strand B</span><span class="open">Open PDF</span></a>
+    <div class="wkrow">Week 4, for study from October 24 to 31</div>
+    <a class="mod" href="https://drive.google.com/file/d/1R5Sff9T0qN8mYdhBV-Vnyyy1K6GGmva8/view" target="_blank" rel="noopener">
+      <span class="no">6</span><span class="t">Language Program Evaluation<span class="s">Purposes and models, logic models and indicators, and getting findings used.</span></span><span class="tag c">Strand C</span><span class="open">Open PDF</span></a>
+    <a class="mod" href="https://drive.google.com/file/d/1Kt5eIwsq7B9ktcjgoZr69v-6Gxfrd-zM/view" target="_blank" rel="noopener">
+      <span class="no">7</span><span class="t">Critical Policy Analysis<span class="s">The policy cycle, Bacchi's WPR approach, and the ethnography of language policy.</span></span><span class="tag c">Strand C</span><span class="open">Open PDF</span></a>
+    <a class="mod" href="https://drive.google.com/file/d/18gNRjs7WkqFgB2ciK1LfEQYtZ_3nprRW/view" target="_blank" rel="noopener">
+      <span class="no">8</span><span class="t">Policy Making and Advocacy<span class="s">Evidence-informed policy making, policy briefs, equity and rights, and AI.</span></span><span class="tag c">Strand C</span><span class="open">Open PDF</span></a>
+  </div>
+</div></section>
+
+<!-- ============ TASKS ============ -->
+<section id="tasks"><div class="wrap">
+  <div class="head">
+    <h2>Weekly tasks</h2>
+    <p>The four tasks build on one another. If you choose your Week 1 policy well, it can carry you through to the final portfolio.</p>
+  </div>
+  <div class="tasks">
+    <article class="task">
+      <div class="top"><span class="tag due">Week 1</span><span class="pct">10%</span></div>
+      <h3>LPP Critical Reflection Paper #1</h3>
+      <p>Choose one language policy that operates in your own institution, written or unwritten. Analyze it with Spolsky's three components and Ruiz's orientations, and argue what the analysis reveals about who holds language-policy power.</p>
+      <div class="meta"><span class="tag self">1,500–2,000 words, APA 7</span><span class="tag self">50 points</span><span class="tag due">Sunday, October 11, 8:00 PM</span></div>
+    </article>
+    <article class="task">
+      <div class="top"><span class="tag due">Week 2</span><span class="pct">15%</span></div>
+      <h3>Policy Genealogy and Critical Analysis Paper</h3>
+      <p>Choose one Philippine or ASEAN language-in-education policy. Trace what problem it claimed to solve, what it replaced, and who promoted or opposed it. Compare the text with the evidence on implementation and evaluate it with at least two Week 1 frameworks.</p>
+      <div class="meta"><span class="tag self">2,500–3,000 words, APA 7</span><span class="tag self">300-word abstract</span><span class="tag due">Sunday, October 18, 8:00 PM</span></div>
+    </article>
+    <article class="task">
+      <div class="top"><span class="tag due">Week 3</span><span class="pct">15%</span></div>
+      <h3>Language Program Plan (Draft)</h3>
+      <p>For a real or proposed program in your own context: a desk-based situation analysis, a needs-analysis plan, four to six outcomes aligned to a named framework, an outline of curriculum, staffing, materials, assessment and timeline, and a draft evaluation framework with a logic model.</p>
+      <div class="meta"><span class="tag self">Structured peer feedback</span><span class="tag due">Sunday, October 25, 8:00 PM</span></div>
+    </article>
+    <article class="task">
+      <div class="top"><span class="tag due">Week 4</span><span class="pct">25% + 10%</span></div>
+      <h3>Final Portfolio and Reflective Commentary</h3>
+      <p>The Language Policy Analysis and Program Development Portfolio moves from analysis to design to advocacy on one policy problem, and ends with a two-page policy brief to a named decision-maker. The Reflective Commentary explains your framework, your framing, and your own position as a policy actor.</p>
+      <div class="meta"><span class="tag self">15 components, see Course Guide, Section IX</span><span class="tag due">Sunday, November 1, 8:00 PM</span></div>
+    </article>
+  </div>
+  <p class="note"><b>Posting.</b> Post each task to that week's Discussion channel on MS Teams and reply substantively to both classmates. End every paper with a short statement of whether and how you used AI. Full instructions and the rubric for each task are in that week's companion module.</p>
+</div></section>
+
+<!-- ============ CONFERENCE ============ -->
+<div class="conf" id="conference"><div class="wrap">
+  <div class="head">
+    <h2>October 31: conference reports</h2>
+    <p>The course closes with a small academic conference. There are no groups. Each of you reports alone on one strand for 30 minutes, with up to 15 slides, and then takes 15 minutes of questions from both classmates and from the professor acting as a panel of policy makers. Strand assignments will be confirmed by the professor.</p>
+  </div>
+
+  <div class="strands">
+    <article class="strand">
+      <div class="who"><span class="tag a">Strand A</span><span>Student 1 at 1:25 PM</span></div>
+      <h3>Philippine language-in-education policy, from the Constitution to RA 12027</h3>
+      <p>Draws on Sessions 1–2. What problem did each policy shift claim to solve, what actually drove it, and what should the first three-year review of RA 12027 recommend?</p>
+      <details><summary>Guiding questions</summary><ol>
+        <li>Trace the genealogy of one shift: its texts, its promoters and opponents, and the problem it claimed to solve.</li>
+        <li>Was MTB-MLE a failed policy or a failed implementation? Weigh the PIDS process evaluation (2021) and the EDCOM II Year One Report (2024).</li>
+        <li>How should a "monolingual class" under RA 12027 be defined, and which learners are most likely to be left out?</li></ol></details>
+      <a class="btn line" href="https://drive.google.com/file/d/1AII68vyG_o2D40rzsNuN1CVqOUMLj13P/view" target="_blank" rel="noopener">Get the Strand A slide template</a>
+    </article>
+    <article class="strand">
+      <div class="who"><span class="tag b">Strand B</span><span>Student 2 at 2:10 PM</span></div>
+      <h3>Comparative language policy and language program planning</h3>
+      <p>Draws on Sessions 3–5. Design the core of a defensible English or Filipino–English program for a Philippine institution you know, grounded in needs analysis and anchored in a named outcomes framework.</p>
+      <details><summary>Guiding questions</summary><ol>
+        <li>What can, and cannot, be borrowed from Singapore, Malaysia, Vietnam, or Indonesia?</li>
+        <li>Whose needs count in your needs analysis, and what are the limits of adopting CEFR descriptors in a Philippine and World Englishes context?</li>
+        <li>How will your plan deal with teacher capacity, resourcing, and the tension between fidelity and local adaptation?</li></ol></details>
+      <a class="btn line" href="https://drive.google.com/file/d/1_cmQtY7qBLnuUo9a6djpflORpRCp8J36/view" target="_blank" rel="noopener">Get the Strand B slide template</a>
+    </article>
+    <article class="strand">
+      <div class="who"><span class="tag c">Strand C</span><span>Student 3 at 3:05 PM</span></div>
+      <h3>Program evaluation, critical policy analysis, and policy making</h3>
+      <p>Draws on Sessions 6–8. Take one current Philippine language policy or program: evaluate whether it works, analyze how its "problem" is represented, and turn your findings into a policy brief that protects equity and language rights.</p>
+      <details><summary>Guiding questions</summary><ol>
+        <li>What logic model, indicators, and evidence would you use, and how would you weigh UNESCO's guidance against the ADBI cross-country study?</li>
+        <li>What does a WPR or ethnographic reading reveal, including the role of teachers as policy arbiters?</li>
+        <li>Using ODI's ROMA approach, who must be persuaded, what exactly do you recommend, and how does it protect language rights?</li></ol></details>
+      <a class="btn line" href="https://drive.google.com/file/d/1oQw1hy6Ht0CjedVsCIX7Zp-iBR8jNBWF/view" target="_blank" rel="noopener">Get the Strand C slide template</a>
+    </article>
+  </div>
+
+  <div class="two">
+    <div class="panel">
+      <h3>Running order, 1:00–4:00 PM</h3>
+      <ul class="run">
+        <li><span class="tm">1:00–1:10</span><span>Opening: conference protocol, timekeeping, and Q&amp;A rules</span></li>
+        <li><span class="tm">1:10–1:25</span><span>Professor's framing of Sessions 6–8</span></li>
+        <li><span class="tm">1:25–2:10</span><span>Student 1, Strand A: 30-minute report, 15-minute Q&amp;A</span></li>
+        <li><span class="tm">2:10–2:55</span><span>Student 2, Strand B: 30-minute report, 15-minute Q&amp;A</span></li>
+        <li><span class="tm">2:55–3:05</span><span>Break</span></li>
+        <li><span class="tm">3:05–3:50</span><span>Student 3, Strand C: 30-minute report, 15-minute Q&amp;A</span></li>
+        <li><span class="tm">3:50–4:00</span><span>Course synthesis and closing</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>What every report must do</h3>
+      <ul class="rules">
+        <li>Answer the strand's main inquiry question and address all three guiding questions.</li>
+        <li>Stay within 30 minutes and 15 slides. Rehearse with a timer.</li>
+        <li>Rest on at least five scholarly or official sources.</li>
+        <li>Examine at least one concrete Philippine policy text, program, or institution.</li>
+        <li>End with a clear recommendation addressed to a named decision-maker.</li>
+        <li>When you are not reporting, bring at least two prepared questions for each classmate.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Rubric A: conference report</h3>
+      <table class="rub">
+        <tr><td>Content mastery and accuracy</td><td>35</td></tr>
+        <tr><td>Critical analysis and policy application</td><td>30</td></tr>
+        <tr><td>Delivery, slide design, and time management</td><td>20</td></tr>
+        <tr><td>Response to Q&amp;A and panel questions</td><td>15</td></tr>
+        <tr><td>Individual score</td><td>100</td></tr>
+      </table>
+      <p class="fine">Save your slides as <code>Student[Number]-SlidesPresentation</code></p>
+    </div>
+    <div class="panel">
+      <h3>Rubric B: Companion Module</h3>
+      <table class="rub">
+        <tr><td>Content accuracy and depth</td><td>20</td></tr>
+        <tr><td>Critical and comparative analysis</td><td>20</td></tr>
+        <tr><td>Application to language policy and programs</td><td>20</td></tr>
+        <tr><td>Policy scenario and discussion questions</td><td>15</td></tr>
+        <tr><td>Integration of Q&amp;A and panel feedback</td><td>15</td></tr>
+        <tr><td>Scholarly writing, organization, and citations</td><td>10</td></tr>
+        <tr><td>Individual score</td><td>100</td></tr>
+      </table>
+      <p class="fine">After October 31, write a 10–15 page module on your strand, revised using the questions you were asked, with an annotated bibliography of at least 8 sources. Save it as <code>Student[Number]-CompanionModule</code>. Due date to be announced.</p>
+    </div>
+  </div>
+
+  <div class="btns" style="margin-top:28px">
+    <a class="btn solid" href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Open the Submission Folder</a>
+    <a class="btn ghost" href="https://drive.google.com/drive/folders/1E4p5zc5Fb2ASrMPdp2YBVtBJP-IGVSWc" target="_blank" rel="noopener">All slide templates</a>
+    <a class="btn ghost" href="https://drive.google.com/file/d/1-AYc-coE8_FdbdWyZIbvVneNhPDBPMK3/view" target="_blank" rel="noopener">Full reporting guide</a>
+  </div>
+</div></div>
+
+<!-- ============ PROFILE ============ -->
+<section id="profile"><div class="wrap">
+  <div class="head">
+    <h2>Doctoral Learner Profile</h2>
+    <p>A one-page introduction, made in Canva and shared with the class before the end of Week 1. It is also your first, informal positionality statement, and you will return to it in the Week 4 Reflective Commentary.</p>
+  </div>
+  <div class="profile">
+    <div>
+      <ol class="steps">
+        <li>Open the Canva template and make your own copy.</li>
+        <li>Add a formal, recent photo and fill in every field.</li>
+        <li>Keep it to one page and readable on a phone.</li>
+        <li>Download it as a PDF or PNG, using the file name printed at the bottom of the template.</li>
+        <li>Share it with the class before the end of Week 1.</li>
+      </ol>
+      <div class="btns"><a class="btn dark" href="https://canva.link/vzdwkfd5c09vydz" target="_blank" rel="noopener">Open the Canva template</a></div>
+      <p class="note"><b>The field that matters most</b> is "a language policy I live with": one written or unwritten rule about language where you work. It can become the policy you analyze in your Week 1 paper.</p>
+    </div>
+    <div class="sheet">
+      <h3>What the profile asks for</h3>
+      <ul class="fields">
+        <li>Full name and preferred name</li>
+        <li>Photo</li>
+        <li>Current position and institution</li>
+        <li>Years in education, highest degree and specialization</li>
+        <li>Languages I speak, and where I use them</li>
+        <li>My teaching or leadership context</li>
+        <li>A language policy I live with</li>
+        <li>Research interests or dissertation direction</li>
+        <li>What I hope to gain from this course</li>
+        <li>A question I bring to this course</li>
+        <li>One sentence about me as a language educator</li>
+        <li>School email and reporting strand</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ READINGS ============ -->
+<section id="readings"><div class="wrap">
+  <div class="head">
+    <h2>Required readings</h2>
+    <p>Every reading is free to open online. If a link fails, search the full title on the publisher's website or email the professor. Full APA references are in the Course Guide, Section XVIII.</p>
+  </div>
+  <div class="read">
+    <details open>
+      <summary><span>Week 1 <small>&nbsp;Foundations and frameworks</small></span></summary>
+      <ol>
+        <li>Spolsky, B. (2007). Towards a theory of language policy. <i>Working Papers in Educational Linguistics, 22</i>(1), 1–14. <a href="https://wpel.gse.upenn.edu/sites/default/files/archives/v22/v22n1_Spolsky.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Hult, F. M., &amp; Hornberger, N. H. (2016). Revisiting orientations in language planning: Problem, right, and resource as an analytical heuristic. <i>Bilingual Review, 33</i>(3), 30–49. <a href="https://www.bilingualreviewjournal.org/index.php/br/article/download/269/257" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>UNESCO. (2003). <i>Education in a multilingual world: UNESCO education position paper.</i> <a href="https://unesdoc.unesco.org/ark:/48223/pf0000129728" target="_blank" rel="noopener">Open on UNESDOC</a></li>
+        <li>United Nations Special Rapporteur on Minority Issues. (2017). <i>Language rights of linguistic minorities: A practical guide for implementation.</i> <a href="https://fuen.org/user_upload/news/News_2017/LanguageRightsLinguisticMinorities_EN.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Haugen, E. (1972). <i>The ecology of language.</i> Stanford University Press. <span class="opt">Optional deeper reading.</span> <a href="https://archive.org/details/isbn_0804708029" target="_blank" rel="noopener">Borrow on Internet Archive</a></li>
+      </ol>
+    </details>
+    <details>
+      <summary><span>Week 2 <small>&nbsp;Philippine and ASEAN policy texts and evidence</small></span></summary>
+      <ol>
+        <li>The 1987 Constitution of the Republic of the Philippines, Article XIV, Sections 6–9. <a href="https://lawphil.net/consti/cons1987.html" target="_blank" rel="noopener">Open on LawPhil</a></li>
+        <li>Executive Order No. 210 (2003), on English as a medium of instruction. <a href="https://lawphil.net/executive/execord/eo2003/eo_210_2003.html" target="_blank" rel="noopener">Open on LawPhil</a></li>
+        <li>Republic Act No. 10533, Enhanced Basic Education Act of 2013. Read Sections 4–5. <a href="https://lawphil.net/statutes/repacts/ra2013/ra_10533_2013.html" target="_blank" rel="noopener">Open on LawPhil</a></li>
+        <li>Republic Act No. 12027 (2024), discontinuing the mother tongue as medium of instruction from Kindergarten to Grade 3. <a href="https://lawphil.net/statutes/repacts/ra2024/ra_12027_2024.html" target="_blank" rel="noopener">Open on LawPhil</a></li>
+        <li>Monje, J. D., Orbeta, A. C., Jr., Francisco-Abrigo, K. A., &amp; Capones, E. M. (2021). <i>"Starting where the children are": A process evaluation of the MTB-MLE program implementation.</i> PIDS. <a href="https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsrp2102.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Mahboob, A., &amp; Cruz, P. (2013). English and mother-tongue-based multilingual education: Language attitudes in the Philippines. <i>Asian Journal of English Language Studies, 1</i>, 1–17. <a href="https://ajels.ust.edu.ph/wp-content/uploads/2022/07/1-English-and-mother-tongue-based-multilingual-education-Language-attitudes-in-the-Philippines.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Kirkpatrick, A., &amp; Liddicoat, A. J. (2017). Language education policy and practice in East and Southeast Asia. <i>Language Teaching, 50</i>(2), 155–188. <a href="https://wrap.warwick.ac.uk/id/eprint/87434/1/WRAP_cal-300317-wrap_-ak_al_lt_article_final_draft__21_jan.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Kosonen, K., &amp; Young, C. (Eds.). (2009). <i>Mother tongue as bridge language of instruction: Policies and experiences in Southeast Asia.</i> SEAMEO and The World Bank. <a href="https://documents1.worldbank.org/curated/zh/527021468104056444/pdf/563290PUB0Box31guage0of0Instruction.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Igarashi, T., Suryadarma, D., &amp; Yadav, P. (2023). <i>Linguistic diversity, school language of instruction policy, and learning outcomes across Asia and the Pacific</i> (ADBI Working Paper 1388). <a href="https://www.adb.org/publications/linguistic-diversity-school-language-of-instruction-policy-and-learning-outcomes-across-asia-and-the-pacific" target="_blank" rel="noopener">Open on ADB</a></li>
+        <li>UNESCO. (2025). <i>Languages matter: Global guidance on multilingual education.</i> <a href="https://doi.org/10.54675/MLIO7101" target="_blank" rel="noopener">Open via DOI</a></li>
+      </ol>
+    </details>
+    <details>
+      <summary><span>Week 3 <small>&nbsp;Frameworks, curriculum, and evaluation</small></span></summary>
+      <ol>
+        <li>Council of Europe. (2020). <i>Common European Framework of Reference for Languages: Companion volume.</i> <a href="https://rm.coe.int/16809ea0d4" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Beacco, J.-C., &amp; Byram, M. (2007). <i>From linguistic diversity to plurilingual education: Guide for the development of language education policies in Europe.</i> Council of Europe. <a href="https://rm.coe.int/16802fc1c4" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Beacco, J.-C., et al. (2016). <i>Guide for the development and implementation of curricula for plurilingual and intercultural education.</i> Council of Europe. <a href="https://rm.coe.int/CoERMPublicCommonSearchServices/DisplayDCTMContent?documentId=09000016806ae621" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Norris, J. M., &amp; Mills, N. (2014). Introduction: Innovation and accountability in language program evaluation. In <i>AAUSC 2014 Volume.</i> Cengage. <a href="https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/3b85539e-afc1-48bb-9e12-927f0c882d62/content" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Klee, C., Melin, C., &amp; Soneson, D. (2014). From frameworks to oversight: Components to improving foreign language program efficacy. In <i>AAUSC 2014 Volume.</i> Cengage. <a href="https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/5c4b9f21-f708-4da8-bfdf-7ebbc0571dfa/content" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>Department of Education. (2023–2024). MATATAG Curriculum guides, including the English guides and the Shaping Paper. <a href="https://www.deped.gov.ph/matatagcurriculumk147/" target="_blank" rel="noopener">Open on DepEd</a></li>
+        <li>Department of Education. (2024). <i>FAQs on the MATATAG Curriculum.</i> Predates RA 12027, so read it as a contrast text. <a href="https://deped.gov.ph/wp-content/uploads/FAQs-ON-THE-MATATAG-CURRICULUM.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+      </ol>
+    </details>
+    <details>
+      <summary><span>Week 4 <small>&nbsp;Policy analysis and brief writing</small></span></summary>
+      <ol>
+        <li>Bacchi, C. (2012). Why study problematizations? Making politics visible. <i>Open Journal of Political Science, 2</i>(1), 1–8. <a href="https://file.scirp.org/Html/18803.html" target="_blank" rel="noopener">Open article</a></li>
+        <li>Young, J., Shaxson, L., Jones, H., Hearn, S., Datta, A., &amp; Cassidy, C. (2014). <i>ROMA: A guide to policy engagement and influence.</i> Overseas Development Institute. <a href="https://cdn.odi.org/media/documents/odi_roma_guide.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+        <li>International Development Research Centre. (2024). <i>How to write a policy brief.</i> <a href="https://idrc-crdi.ca/en/funding/resources-idrc-grantees/how-write-policy-brief" target="_blank" rel="noopener">Open guide</a></li>
+        <li>Global Partnership for Education &amp; IIEP-UNESCO. (2015). <i>Guidelines for education sector plan preparation.</i> <a href="https://www.globalpartnership.org/node/document/download?file=document/file/2020-GPE-guidelines-preparation-EN.pdf" target="_blank" rel="noopener">Open PDF</a></li>
+      </ol>
+    </details>
+  </div>
+</div></section>
+
+<!-- ============ GRADING ============ -->
+<section id="grading"><div class="wrap">
+  <div class="head">
+    <h2>How your grade is built</h2>
+    <p>Seven requirements, weighted as set out in the Course Guide, Section VIII. Your October 31 conference report doubles as the Policy Stakeholder Forum.</p>
+  </div>
+  <div class="bars">
+    <div class="bar"><div class="nm">LPP Critical Reflection Paper #1<small>Week 1</small></div><div class="track"><i style="width:40%"></i></div><div class="v">10%</div></div>
+    <div class="bar"><div class="nm">Policy Genealogy and Critical Analysis Paper<small>Week 2</small></div><div class="track"><i style="width:60%"></i></div><div class="v">15%</div></div>
+    <div class="bar"><div class="nm">Language Program Plan (Draft)<small>Week 3</small></div><div class="track"><i style="width:60%"></i></div><div class="v">15%</div></div>
+    <div class="bar"><div class="nm">Conference Report / Policy Stakeholder Forum<small>Week 4, October 31</small></div><div class="track"><i style="width:60%"></i></div><div class="v">15%</div></div>
+    <div class="bar"><div class="nm">Participation<small>All weeks: both live sessions, Discussion posts, peer replies</small></div><div class="track"><i style="width:40%"></i></div><div class="v">10%</div></div>
+    <div class="bar big"><div class="nm">Final Language Policy Analysis and Program Development Portfolio<small>Week 4</small></div><div class="track"><i style="width:100%"></i></div><div class="v">25%</div></div>
+    <div class="bar"><div class="nm">Reflective Commentary / Positionality Statement<small>Week 4</small></div><div class="track"><i style="width:40%"></i></div><div class="v">10%</div></div>
+  </div>
+  <div class="note">
+    <b>What doctoral work is judged on.</b> A policy brief or program plan does not earn a high grade for being comprehensive or persuasive. You must show why the analysis is sound, what evidence supports it, and how the recommendation follows from it.
+    <ul class="stds">
+      <li>Theoretical sophistication</li>
+      <li>Depth and balance of engagement with scholarship and evidence</li>
+      <li>Rigor of policy analysis</li>
+      <li>Originality of contribution</li>
+      <li>Coherence between analysis, program design, and evaluation</li>
+      <li>Contextual and sociolinguistic awareness</li>
+      <li>Attention to equity, rights, and ethics</li>
+      <li>Feasibility and strategic value of recommendations</li>
+      <li>Scholarly and professional communication at a publishable standard</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- ============ POLICIES ============ -->
+<section id="policies"><div class="wrap">
+  <div class="head">
+    <h2>Class policies</h2>
+  </div>
+  <div class="pols">
+    <article class="pol">
+      <h3>Communication</h3>
+      <p>Official communication (concerns, submissions, grade inquiries) goes through the professor's email only.</p>
+      <div class="mail"><span id="em">carlo.villalon@perpetualdalta.edu.ph</span><button type="button" id="copy">Copy</button></div>
+      <ul>
+        <li>MS Teams hosts the two live sessions and the weekly Discussion channels.</li>
+        <li>The class Facebook group chat is for quick announcements and general engagement.</li>
+      </ul>
+    </article>
+    <article class="pol">
+      <h3>Academic integrity and AI</h3>
+      <p>The sources you cite must exist and say what you claim, and the argument must be yours.</p>
+      <ul>
+        <li><b>Disclose.</b> State at the end of each paper whether and how you used AI: the tool, the purpose, and the extent.</li>
+        <li><b>Support, not replace.</b> AI may help you brainstorm or check clarity. The analysis and reflection must be your own.</li>
+        <li><b>Verify every source.</b> If you cannot open it, you cannot cite it.</li>
+      </ul>
+    </article>
+    <article class="pol">
+      <h3>Confidentiality</h3>
+      <p>When you write or present about your own institution:</p>
+      <ul>
+        <li>Describe documents accurately, naming the document type and year.</li>
+        <li>Anonymize colleagues, learners, and parents.</li>
+        <li>Do not publish internal material you were not authorized to share.</li>
+      </ul>
+    </article>
+  </div>
+</div></section>
+
+<div class="quote"><div class="wrap">
+  <blockquote>Language policy is not only what governments write. It is what institutions require, what teachers do, and what communities believe about language, and <mark>every educator is already a policy actor.</mark></blockquote>
+  <cite>Core course philosophy, Course Guide, Section XVII</cite>
+</div></div>
+
+</main>
+
+<footer><div class="wrap">
+  <p>Class site maintained by Carlo S. Villalona, LPT, PhD, for PHDENG 2214, Section 4-PHD-ENG-A. It is not an official University website. Materials are for use in this class only.</p>
+</div></footer>
+
+<script>
+(function(){
+  // copy the professor's email
+  var b=document.getElementById('copy'),e=document.getElementById('em');
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)};
+    if(navigator.clipboard){navigator.clipboard.writeText(e.textContent).then(done,function(){})}
+    else{var r=document.createRange();r.selectNode(e);var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');done()}catch(x){}}
+  });
+  // highlight the current section in the nav
+  var links=[].slice.call(document.querySelectorAll('.nav li a')),map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[x.target.id];if(a){a.classList.add('on')}}})},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
+  }
+})();
+</script>
+</body>
+</html>
