@@ -48,9 +48,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ---------- hero ---------- */
 .hero{background:var(--plum);color:#fff;position:relative;overflow:hidden}
-.banner{display:block;width:100%;height:auto;max-width:1983px;margin:0 auto}
-.hero .herobar{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:28px}
-.hero .herobar h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero.banner{padding:0}
+.hero.banner picture{display:block;max-width:1400px;margin:0 auto}
+.bannerimg{display:block;width:100%;height:auto}
+.hero.banner .wrap{display:block;padding-top:22px;padding-bottom:34px}
+.hero.banner .btns{justify-content:center}
+.hero.banner .mobtext{display:none}
+.hero.banner .lede{margin:10px 0 22px;font-size:1.05rem;max-width:34em}
+.hero.banner .course{margin-bottom:0}
+@media (max-width:700px){.hero.banner .mobtext{display:block}.hero.banner .btns{justify-content:flex-start}.hero.banner .wrap{padding-top:18px}}
 .hero .course{font-family:var(--display);font-size:16px;color:#f1d9d6;margin-bottom:6px}
 .hero .course b{color:var(--marigold);font-weight:700}
 .hero h1{font-size:clamp(2.4rem,5vw,3.9rem);font-weight:700;letter-spacing:-.02em}
@@ -315,7 +322,6 @@ footer{background:var(--plum);color:#f1d9d6;padding:36px 0;font-size:15.5px}
 footer p{margin:0;max-width:52em}
 
 @media (max-width:920px){
-  .hero .herobar h1{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;margin:10px 0 12px}
   .onion{justify-self:start;max-width:340px}
   .facts .wrap{grid-template-columns:1fr 1fr}
   .facts div{border:0;margin:0;padding:16px 12px 16px 0}
@@ -360,13 +366,16 @@ footer p{margin:0;max-width:52em}
   </div>
 </nav>
 
-<header class="hero" id="top">
-  <img class="banner" src="assets/banner.jpg" width="1983" height="793" alt="PHDENG 2214 / 4-PHD-ENG-A, Language Program Planning and Policy Making. A graduate course that explores the foundations, processes, and practices in planning, implementing, and evaluating language programs and language education policies in diverse educational contexts. University of Perpetual Help System DALTA.">
-  <div class="wrap herobar">
-    <div>
+<header class="hero banner" id="top">
+  <h1 class="vh">Language Program Planning and Policy Making</h1>
+  <picture>
+    <source media="(max-width:700px)" srcset="assets/banner-sm.jpg">
+    <img class="bannerimg" src="assets/banner.jpg" width="1983" height="793" alt="PHDENG 2214 / 4-PHD-ENG-A, Language Program Planning and Policy Making. A graduate course that explores the foundations, processes, and practices in planning, implementing, and evaluating language programs and language education policies in diverse educational contexts. University of Perpetual Help System DALTA.">
+  </picture>
+  <div class="wrap">
+    <div class="mobtext">
       <p class="course"><b>PHDENG 2214</b> &nbsp;Section 4-PHD-ENG-A &nbsp;|&nbsp; Module 4, 1st Semester, SY 2026–2027</p>
-      <h1><span>Language Program Planning</span><span class="l2">and Policy Making</span></h1>
-      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School.</p>
+      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School. This site sets out what the course studies, how it is organized, and everything students need for the four weeks.</p>
     </div>
     <div class="btns">
       <a class="btn solid" href="#start">Start here</a>
