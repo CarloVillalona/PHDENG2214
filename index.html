@@ -48,13 +48,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ---------- hero ---------- */
 .hero{background:var(--plum);color:#fff;position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:64px}
-.hero .course{font-family:var(--display);font-size:16px;color:#f1d9d6;margin-bottom:22px}
+.banner{display:block;width:100%;height:auto;max-width:1983px;margin:0 auto}
+.hero .herobar{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between;padding-top:26px;padding-bottom:28px}
+.hero .herobar h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero .course{font-family:var(--display);font-size:16px;color:#f1d9d6;margin-bottom:6px}
 .hero .course b{color:var(--marigold);font-weight:700}
 .hero h1{font-size:clamp(2.4rem,5vw,3.9rem);font-weight:700;letter-spacing:-.02em}
 .hero h1 span{display:block}
 .hero h1 .l2{color:var(--marigold)}
-.hero .lede{font-size:1.15rem;color:#f8eae8;max-width:34em;margin:26px 0 30px}
+.hero .lede{font-size:1.05rem;color:#f8eae8;max-width:34em;margin:0}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:16px;text-decoration:none;padding:13px 22px;border-radius:999px;border:2px solid transparent;cursor:pointer}
 .btn.solid{background:var(--marigold);color:var(--plum)}
@@ -313,7 +315,7 @@ footer{background:var(--plum);color:#f1d9d6;padding:36px 0;font-size:15.5px}
 footer p{margin:0;max-width:52em}
 
 @media (max-width:920px){
-  .hero .wrap{grid-template-columns:1fr;padding-top:48px}
+  .hero .herobar h1{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;margin:10px 0 12px}
   .onion{justify-self:start;max-width:340px}
   .facts .wrap{grid-template-columns:1fr 1fr}
   .facts div{border:0;margin:0;padding:16px 12px 16px 0}
@@ -359,34 +361,18 @@ footer p{margin:0;max-width:52em}
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
+  <img class="banner" src="assets/banner.jpg" width="1983" height="793" alt="PHDENG 2214 / 4-PHD-ENG-A, Language Program Planning and Policy Making. A graduate course that explores the foundations, processes, and practices in planning, implementing, and evaluating language programs and language education policies in diverse educational contexts. University of Perpetual Help System DALTA.">
+  <div class="wrap herobar">
     <div>
       <p class="course"><b>PHDENG 2214</b> &nbsp;Section 4-PHD-ENG-A &nbsp;|&nbsp; Module 4, 1st Semester, SY 2026–2027</p>
       <h1><span>Language Program Planning</span><span class="l2">and Policy Making</span></h1>
-      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School. This site sets out what the course studies, how it is organized, and everything students need for the four weeks.</p>
-      <div class="btns">
-        <a class="btn solid" href="#start">Start here</a>
-        <a class="btn ghost" href="#about">About the course</a>
-        <a class="btn ghost" href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Open the Submission Folder</a>
-      </div>
+      <p class="lede">Class site for the PhD in English at the University of Perpetual Help System DALTA Graduate School.</p>
     </div>
-
-    <svg class="onion" viewBox="0 0 440 440" role="img" aria-labelledby="onionT onionD">
-      <title id="onionT">The layers of language policy</title>
-      <desc id="onionD">Five nested circles, from the supranational layer on the outside to the classroom and community at the centre.</desc>
-      <circle cx="220" cy="220" r="212" fill="#6a1423"/>
-      <circle cx="220" cy="220" r="170" fill="#7c1b2c"/>
-      <circle cx="220" cy="220" r="128" fill="#92283a"/>
-      <circle cx="220" cy="220" r="86"  fill="#ad4457"/>
-      <circle cx="220" cy="220" r="46"  fill="#f2b705"/>
-      <text x="220" y="34"  text-anchor="middle">Supranational and regional</text>
-      <text x="220" y="76"  text-anchor="middle">National</text>
-      <text x="220" y="118" text-anchor="middle">Regional and division</text>
-      <text x="220" y="160" text-anchor="middle">Institutional</text>
-      <text x="220" y="216" text-anchor="middle" style="fill:#5c0f1c;font-weight:700">Classroom</text>
-      <text x="220" y="233" text-anchor="middle" style="fill:#5c0f1c;font-weight:700">and community</text>
-      <text class="cap" x="220" y="418" text-anchor="middle">Policy is made at every layer</text>
-    </svg>
+    <div class="btns">
+      <a class="btn solid" href="#start">Start here</a>
+      <a class="btn ghost" href="#about">About the course</a>
+      <a class="btn ghost" href="https://drive.google.com/drive/folders/1Ssb8m6VD0973xHNBjKWZ8Y6-Phg5irbX" target="_blank" rel="noopener">Open the Submission Folder</a>
+    </div>
   </div>
 </header>
 
