@@ -118,6 +118,7 @@ h3{font-size:1.3rem;font-weight:700}
 .doc h3{margin-bottom:8px}
 .doc p{font-size:16px;color:var(--muted);margin:0 0 18px}
 .doc .go{margin-top:auto;font-family:var(--display);font-weight:700;font-size:15px;color:var(--plum);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--marigold);text-decoration-thickness:2px}
+.doc.att{grid-column:1/2}.doc.trk{grid-column:2/-1}
 .doc.first{grid-row:span 2;background:var(--plum);color:#fff;border-color:var(--plum);justify-content:flex-end;min-height:300px}
 .doc.first h3{font-size:2rem}
 .doc.first p{color:#f4e0dd;font-size:17px}
@@ -328,6 +329,7 @@ footer p{margin:0;max-width:52em}
   .facts div{border:0;margin:0;padding:16px 12px 16px 0}
   .prof,.creds,.about,.levels,.clos,.themes,.scholars,.regs,.start,.weeks,.exams,.tasks,.strands,.two,.profile,.pols{grid-template-columns:1fr}
   .doc.first{grid-row:auto;min-height:0}
+  .doc.att,.doc.trk{grid-column:auto}
   .doc.first .n{margin-bottom:28px}
   .mod{grid-template-columns:44px 1fr;gap:6px 14px}
   .mod .tag,.mod .open{grid-column:2;justify-self:start}
@@ -510,7 +512,7 @@ footer p{margin:0;max-width:52em}
 <section id="start"><div class="wrap">
   <div class="head">
     <h2>Start here</h2>
-    <p>Three documents, one template, the attendance sheet, and one folder for your submissions set up the whole module. Open the Course Guide first, then read the Orientation Module before the October 10 session.</p>
+    <p>Three documents, one template, one folder for your submissions, and two trackers for attendance and submissions set up the whole module. Open the Course Guide first, then read the Orientation Module before the October 10 session.</p>
   </div>
   <div class="start">
     <a class="doc first" href="https://drive.google.com/file/d/14t6MDxOngSvDU7xWC0KPaV66nV1RxXUA/view" target="_blank" rel="noopener">
@@ -539,10 +541,15 @@ footer p{margin:0;max-width:52em}
       <p>Upload every asynchronous task, your slides, and your Companion Module here, each by its due date.</p>
       <span class="go">Open the Submission Folder</span>
     </a>
-    <a class="doc" style="grid-column:1/-1" href="https://docs.google.com/spreadsheets/d/15dKsA0MSi14Qv8dnWS6r_9K9BQlto_yU/edit" target="_blank" rel="noopener">
+    <a class="doc att" href="https://docs.google.com/spreadsheets/d/15dKsA0MSi14Qv8dnWS6r_9K9BQlto_yU/edit" target="_blank" rel="noopener">
       <h3>Attendance Sheet</h3>
       <p>The class attendance tracker for the four Saturday sessions. Find your row and enter your official Perpetual email address in the highlighted column. Attendance itself is marked by the professor.</p>
       <span class="go">Open the Attendance Sheet</span>
+    </a>
+    <a class="doc trk" href="https://drive.google.com/file/d/1CDtDVV8d5seq-zZseMV7W7Cj5q_1OoYl/view" target="_blank" rel="noopener">
+      <h3>Submission Tracker</h3>
+      <p>The status of every requirement for each student: Submitted, Submitted (Late), Pending, or Not Submitted. It shows status only, never scores, and is updated as files arrive in the Submission Folder. If a status looks wrong, message the professor.</p>
+      <span class="go">Open the Submission Tracker</span>
     </a>
   </div>
 </div></section>
