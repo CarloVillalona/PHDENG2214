@@ -143,6 +143,10 @@ h3{font-size:1.3rem;font-weight:700}
 .exam{background:var(--plum);color:#fff;border-radius:var(--r);padding:22px 24px}
 .exam h3{margin:12px 0 4px;font-size:1.4rem}
 .exam .xd{margin:0;font-family:var(--display);color:var(--marigold);font-weight:600}
+.exam.off{background:var(--card);color:var(--ink,inherit);border:1px dashed var(--line)}
+.exam.off .xd{color:var(--plum)}
+.exam.off h3{text-decoration:line-through;text-decoration-thickness:1px}
+.exam .xn{margin:8px 0 0;font-size:15px;opacity:.85}
 .key{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:18px;font-family:var(--display);font-size:15px;color:var(--muted)}
 
 /* modules */
@@ -546,7 +550,7 @@ footer p{margin:0;max-width:52em}
       <p>The class attendance tracker for the four Saturday sessions. Find your row and enter your official Perpetual email address in the highlighted column. Attendance itself is marked by the professor.</p>
       <span class="go">Open the Attendance Sheet</span>
     </a>
-    <a class="doc trk" href="https://drive.google.com/file/d/1PWkgU3G865UqMAVXWSo8umZ30NHL9Rbl/view" target="_blank" rel="noopener">
+    <a class="doc trk" href="https://drive.google.com/file/d/11BPk2kOQ42d2E-j94y2UAz8ARdwcA59T/view" target="_blank" rel="noopener">
       <h3>Submission Tracker</h3>
       <p>The status of every requirement for each student: Submitted, Submitted (Late), Pending, or Not Submitted. It shows status only, never scores, and is updated as files arrive in the Submission Folder. If a status looks wrong, message the professor.</p>
       <span class="go">Open the Submission Tracker</span>
@@ -586,7 +590,7 @@ footer p{margin:0;max-width:52em}
   </div>
   <div class="key"><span><span class="tag live">Live</span> on MS Teams</span><span><span class="tag self">Self-study</span> at your own pace</span><span><span class="tag due">Due</span> seven days after each Sunday session, uploaded to the Submission Folder</span></div>
   <div class="exams">
-    <article class="exam"><span class="tag live">Examination</span><h3>Midterm Examination</h3><p class="xd">Wednesday, October 21, 2026</p></article>
+    <article class="exam off"><span class="tag live">Not held</span><h3>Midterm Examination</h3><p class="xd">Cancelled</p><p class="xn">Removed from the course after the university health break and the adjustment of the final session. It carries no weight in your grade.</p></article>
     <article class="exam"><span class="tag live">Examination</span><h3>Final Examination</h3><p class="xd">Wednesday, November 4, 2026</p></article>
   </div>
 </div></section>
